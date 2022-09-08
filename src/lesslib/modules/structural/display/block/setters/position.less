@@ -1,0 +1,27 @@
+#pos {
+	.static() {
+		position: static;
+	}
+
+	.rel() {
+		position: relative;
+	}
+
+	.abs() {
+		position: absolute;
+	}
+
+	.fixed(@t; @l) {
+		position: fixed;
+		#put.tl(@t, @l)
+	}
+
+	.sticky(@len: 0; @side: bottom) {
+		position: sticky;
+		@{side}: @len;
+	}
+
+	.inset(@t; @r; @b; @l) {
+		inset: @t @r @b @l;
+	}
+}

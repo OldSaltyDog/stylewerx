@@ -1,0 +1,23 @@
+#rad {
+
+	.d(@r) {
+		@radius: (@r*2);
+	}
+
+	.c(@r) {
+		@circ: (2*pi()*@r);
+	}
+
+	.area(@r) {
+		@circ: (pi()*(@r*@r));
+	}
+
+	.x(@offset; @radius; @angle) {
+		@x: (round(@offset + (@radius * cos(@angle*(pi()/180)))));
+	}
+
+	.y(@offset; @radius; @angle) {
+		@y: (round(@offset - (@radius * sin(@angle*(pi()/180)))));
+
+	}
+}

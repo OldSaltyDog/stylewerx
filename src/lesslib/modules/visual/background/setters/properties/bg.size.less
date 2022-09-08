@@ -1,0 +1,33 @@
+
+#bg {
+	.size() {
+
+		.set(@s) {
+			background-size+: @s @s;
+		}
+
+		.set(@w; @h) {
+			background-size+: @w @h;
+		}
+
+		.quarter() {
+			background-size+: 25% 25%;
+		}
+
+		.half() {
+			background-size+: 50% 50%;
+		}
+
+		.full() {
+			background-size+: 100% 100%;
+		}
+	}
+
+	.contain() {
+		background-size+: contain;
+	}
+
+	.cover() {
+		background-size+: cover;
+	}
+}

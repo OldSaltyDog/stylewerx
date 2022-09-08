@@ -1,0 +1,9 @@
+#bg {
+	.diamonds(@clr1; @clr2: @t) {
+		@sp: #stops.hard.mid(@clr1; @clr2)[];
+		#bg.add(#grad.linear(60deg, @sp)[]);
+		#bg.add(#grad.linear(120deg, @sp)[]);
+		background-size: 70px 140px;
+	}
+	
+}

@@ -1,0 +1,31 @@
+
+/* * * * * * * * * * * * * * * * * * * *
+ * Page: linear.less
+ * Date: 13Jul2022
+ * Code: WA Orr
+ * Desc: Linear gradient function setter
+ * * * * * * * * * * * * * * * * * * * */
+#grad {
+
+	/* * * * * * * * * * * * *
+	* @name: .linear
+	* @desc: Creates a linear gradient
+	* @params 
+	*	@angle: direction of gradient
+	*	@colorstop: colorstop list
+	* * * * * * * * * * * * */
+	.linear(@cs; @angle: 180deg) {
+		@lg: linear-gradient(@angle, @cs);
+	}
+
+	/* * * * * * * * * * * * *
+	* @name: .linear-r
+	* @desc: Creates a repeating linear gradient
+	* @params 
+	*	@angle: direction of gradient
+	*	@cs: cs list
+	* * * * * * * * * * * * */
+	.linear-r(@angle: 180deg; @cs) {
+		@lg-r: repeating-linear-gradient(@angle, @cs);
+	}
+}

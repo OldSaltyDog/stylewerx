@@ -1,0 +1,11 @@
+#bg {
+	.gridlines() {
+		@g1: .hs(@fw-50, @t, 2px)[];
+		@g2: .hs(@fw-25, @t, 1px)[];
+		#bg.add(#grad.linear(90deg; @g1)[]; -2px -2px; 100px 100px);
+		#bg.add(#grad.linear(0deg; @g1)[]; -2px -2px; 100px 100px);
+		#bg.add(#grad.linear(90deg; @g2)[]; -1px -1px; 10px 10px);
+		#bg.add(#grad.linear(0deg; @g2)[]; -1px -1px; 10px 10px);
+		#bg.color(#246);
+	}
+}

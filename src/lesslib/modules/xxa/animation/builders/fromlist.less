@@ -1,0 +1,16 @@
+#ani {
+
+	.fromList(@name; @prop; @list) {
+		@step: (100% / (length(@list) - 1));
+		@keyframes @name {
+
+			each(@list, {
+				@currstep: ((@index - 1) * @step);
+				@{currstep} {
+					@{prop}: @value;
+				}
+			});
+		}
+	}
+}	
+	

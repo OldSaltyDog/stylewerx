@@ -1,0 +1,35 @@
+#bg {
+	.pos() {
+		.set(@s) {
+			background-position+: @s @s;
+		}
+
+		.set(@x; @y) {
+			background-position+: @x @y;
+		}
+
+		.x(@x) {
+			background-position-x+: @x;
+		}
+
+		.y(@y) {
+			background-position-y+: @y;
+		}
+
+		.base() {
+			background-position+: 0 0;
+		}
+
+		.quarter() {
+			background-position+: 25% 25%;
+		}
+
+		.half() {
+			background-position+: 50% 50%;
+		}
+
+		.full() {
+			background-position+: 100% 100%;
+		}
+	}
+}

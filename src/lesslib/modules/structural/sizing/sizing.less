@@ -1,0 +1,35 @@
+
+/*
+*
+* File: sizing.less
+* Date: 08Jul2022
+* Code: W. Anthony Orr
+* Desc: sizing setters 
+*/
+
+#size {
+	.set(@s) {
+		height: @s;
+		width: @s;
+	}
+	
+	.set(@w; @h) {
+		height: @h;
+		width: @w;
+	}
+	
+	.none() {
+		height: 0;
+		width: 0;
+	}
+	
+	.min(@w; @h) {
+		min-height: @h;
+		min-width: @w;
+	}
+
+	.max(@w; @h) {
+		max-height: @h;
+		max-width: @w;
+	}
+}

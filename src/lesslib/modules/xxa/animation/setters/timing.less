@@ -1,0 +1,39 @@
+#ani {
+	.tf() {
+		.linear() {
+			animation-timing-function: linear;
+		}
+
+		.ease() {
+			animation-timing-function: ease;
+		}
+
+		.ease-in() {
+			animation-timing-function: ease-in;
+		}
+
+		.ease-out() {
+			animation-timing-function: ease-out;
+		}
+
+		.ease-in-out() {
+			animation-timing-function: ease-in-out;
+		}
+
+		.step-start() {
+			animation-timing-function: step-start;
+		}
+
+		.step-end() {
+			animation-timing-function: step-end;
+		}
+
+		.cb(@x1; @y1; @x2; @y2) {
+			animation-timing-function: cubic-bezier(@arguments);
+		}
+
+		.step(@steps) {
+			animation-timing-function: step(@steps);
+		}
+	}
+}

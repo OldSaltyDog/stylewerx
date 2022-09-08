@@ -1,0 +1,57 @@
+#stops {
+	.soft() {
+
+		/* * * * * * * * * * * * *
+		* @name: .c2
+		* @desc: Creates a soft 2 color colorstop
+		* @return: @c2 
+		* @params 
+		*	@clr1: color to apply to first half of gradient
+		*	@clr2: (default: transparent) color to apply to last half of gradient
+		* * * * * * * * * * * * */
+		.c2(@clr1; @clr2: @t) {
+			@c2: @clr1 @sp, @clr2 100%;
+		}
+
+		/* * * * * * * * * * * * *
+		* @name: .c2
+		* @desc: Creates a soft 2 color colorstop
+		* @return: @c2 
+		* @params 
+		*	@clr1: color to apply to first half of gradient
+		*	@clr2: (default: transparent) color to apply to last half of gradient
+		*	@stop: (default: 50%) Stop point
+		* * * * * * * * * * * * */
+		.c2(@clr1; @clr2: @t; @sp: 50%) {
+			@c2: @clr1 @sp, @clr2 100%;
+		}
+
+		/* * * * * * * * * * * * *
+		* @name: .c3
+		* @desc: Creates a soft, equally spaced 3 color colorstop
+		* @return: @c3
+		* @params 
+		*	@clr1: Starting color
+		*	@clr2: Mid color
+		*	@clr3: End color
+		* * * * * * * * * * * * */
+		.c3(@clr1; @clr2; @clr3) {
+			@c3: @clr1, @clr2, @clr3;
+		}
+
+		/* * * * * * * * * * * * *
+		* @name: .c3
+		* @desc: Creates a soft 3 color colorstop
+		* @return: @c3
+		* @params 
+		*	@clr1: Starting color
+		*	@clr2: Mid color
+		*	@clr3: End color
+		*	@sp1: (default: 25%) Stop point 1
+		*	@sp2: (default: 75%) Stop point 2
+		* * * * * * * * * * * * */
+		.c3(@clr1; @clr2; @clr3; @sp1; @sp2) {
+			@c3: @clr1 0, @clr2 @sp1, @clr3 @sp2, @clr3 100%;
+		}
+	}
+}

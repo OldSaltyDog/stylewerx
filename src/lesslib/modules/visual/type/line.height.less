@@ -1,0 +1,17 @@
+#lh {
+	.set(@lh) {
+		line-height: @lh;
+	}
+
+	.step(@step) {
+		line-height-step: @step;
+	}
+
+	.to-h(@lh; @fs) {
+		height: (@lh * @fs);
+	}
+
+	.from-h(@lh; @h) {
+		line-height: (@lh/@fs);
+	}
+}

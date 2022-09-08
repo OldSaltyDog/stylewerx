@@ -1,0 +1,33 @@
+.pad(@v: 0) {
+	padding: @v;
+}
+
+#pad {
+	.x(@v) {
+		padding: @v 0;
+	}
+
+	.y(@v) {
+		padding: 0 @v;
+	}
+
+	.none() {
+		padding: 0;
+	}
+
+	.t(@v) {
+		padding-top: @v;
+	}
+
+	.r(@v) {
+		padding-right: @v;
+	}
+
+	.b(@v) {
+		padding-bottom: @v;
+	}
+
+	.l(@v) {
+		padding-left: @v;
+	}
+}

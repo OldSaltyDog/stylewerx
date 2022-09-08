@@ -1,0 +1,14 @@
+#grad {
+
+	.conic(@colorstop) {
+		@cg: conic-gradient(@colorstop);
+	}
+
+	.conic(@colorstop; @start) {
+		@cg: conic-gradient(from @start, @colorstop);
+	}
+
+	.conic-r(@colorstop; @start; @origin) {
+		@cg-r: conic-gradient(from @start at @origin, @cp);
+	}
+}

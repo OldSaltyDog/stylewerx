@@ -1,0 +1,47 @@
+#ani
+{
+	//  name duration timing-function delay iteration-count direction fill-mode play-state;
+	.set(@name; @dur; @tf) {
+		animation: @arguments;
+	}
+
+	.set(@name; @dur; @tf; @delay) {
+		animation: @arguments;
+	}
+
+	.set(@name; @dur; @tf; @delay; @count) {
+		animation: @arguments;
+	}
+
+	.set(@name; @dur; @tf; @delay; @count, @dir) {
+		animation: @arguments;
+	}
+
+	.set(@name; @dur; @tf; @delay; @count, @dir; @fm) {
+		animation: @arguments;
+	}
+
+	.set(@name; @dur; @tf; @delay; @count, @dir; @fm; @ps) {
+		animation: @arguments;
+	}
+
+	.name(@s) {
+		animation-name: @s;
+	}
+
+	.duration(@len) {
+		animation-duration: @len;
+	}
+
+	.delay(@len) {
+		animation-delay: @len;
+	}
+
+	.count(@i) {
+		animation-iteration-count: @i;
+	}
+
+	.direction(@i) {
+		animation-iteration-count: @i;
+	}
+}

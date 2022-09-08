@@ -1,0 +1,13 @@
+.bs(@list; @inset: false) {
+	box-shadow+: @list;
+
+	& when (@inset) {
+		box-shadow+_: inset;
+	}
+}
+
+#bs {
+	.border(@size; @clr) {
+		.bs(0 0 0 @size @clr);
+	}
+}

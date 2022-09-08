@@ -1,0 +1,37 @@
+/*
+* Styless Less Framework
+* * * * * * * * * * * * *
+* Page: hardstops.less
+* Date: 13JUL22
+* Desc: Hard colorstop mixins for gradients 
+* * * * * * * * * * * * */
+
+.hs(@clr1; @sp; @clr2: @t) {
+	@stop: @clr1 @sp, @clr2 0; 
+}
+
+#stops {
+
+	.hard() {
+
+		.stop(@clr1; @clr2; @sp) {
+			@stop: @clr1 @sp, @clr2 0; 
+		}
+
+		.eighth(@clr1; @clr2: @t) {
+			@eighth: @clr1 12.5%, @clr2 0;
+		}
+
+		.qtr(@clr1; @clr2: @t) {
+			@qtr: @clr1 25%, @clr2 0;
+		} 
+
+		.half(@clr1; @clr2: @t) {
+			@half: @clr1 50%, @clr2 0;
+		}
+
+		.mid(@clr1; @clr2: @t) {
+			@mid: @clr1 0, @clr1 25%, @clr2 25%, @clr2 75%, @clr1 75%, @clr1 100%;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+#bg {
+	.lighten(@clr; @amt: 10) {
+		#bg.add(#grad.linear(@cs: @clr, lighten(@clr, @amt))[]);
+	}
+
+	.darken(@clr; @amt: 10) {
+		#bg.add(#grad.linear(@cs: @clr, darken(@clr, @amt))[]);
+	}
+
+	.spin(@clr; @amt: 10) {
+		#bg.add(#grad.linear(@cs: @clr, spin(@clr, @amt))[]);
+	}
+
+	.sat(@clr; @amt: 10) {
+		#bg.add(#grad.linear(@cs: @clr, saturate(@clr, @amt))[]);
+	}
+}

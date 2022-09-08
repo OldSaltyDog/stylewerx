@@ -1,0 +1,31 @@
+#xf {
+	.set(@value) {
+		transform+_: @value;
+	}
+
+	.origin(@pos) {
+		transform-origin: @pos;
+	}
+
+	.origin(@x; @y) {
+		transform-origin: @arguments;
+	}
+
+	.perspective(@p: 400) {
+		perspective: @p;
+	}
+
+	.p-origin(@pos) {
+		perspective-origin: @pos;
+	}
+
+	.bf-vis(@bool: true) {
+		-webkit-backface-visibility: @bool;
+		backface-visibility: @bool;
+	}
+
+	.be3d(@bool: true) {
+		-webkit-preserve-3d: @bool;
+		preserve-3d: @bool;
+	}
+}

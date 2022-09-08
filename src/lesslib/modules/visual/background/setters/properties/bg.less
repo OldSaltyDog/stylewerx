@@ -1,0 +1,56 @@
+//	background: (bg-color | bg-image) position/bg-size bg-repeat bg-origin bg-clip bg-attachment
+
+#bg {
+
+	/* * * * * * * * * * * * * * * * * * * * *
+	* @name: #bg.add (shorthand)
+	* @desc: uses the bg properties shorthand
+	* @params: @image 	<string> | <color> | <function>
+	* * * * * * * * * * * * * * * * * * * * */
+	.add(@image) {
+		background+: @image;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * *
+	* @name: #bg.add (shorthand)
+	* @desc: uses the bg properties shorthand
+	* @params: @image 	<string> | <color> | <function>
+	*		   @pos 	<length> <length>  
+	* * * * * * * * * * * * * * * * * * * * */
+	.add(@image; @pos) {
+		background+: @image @pos;
+	}
+
+	/* * * * * * *
+	* @name: #bg.add (shorthand)
+	* @desc: uses the bg properties shorthand
+	* @params: @image 	<string> | <color> | <function>
+	*		   @pos 	<length> <length>  
+	*		   @size 	<length> <length>  | cover||contain
+	* * * * * * * * * * * * * * * * * * * * */
+	.add(@image; @pos; @size) {
+		background+: @image ~'@{pos}/@{size}';
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * *
+	* @name: #bg.add (shorthand)
+	* @desc: uses the bg properties shorthand
+	* @params: @image 	<string> | <color> | <function>
+	*		   @pos 	<length> <length>  
+	*		   @size 	<length> <length>  | cover||contain
+	*		   @repeat 	no-repeat||repeat
+	*  * * * * * * * * * * * * * * * * * * * */
+	.add(@image; @pos; @size; @repeat) {
+		@sp: ~'@{pos}/@{size}';
+		background+: @image @sp @repeat;
+	}
+
+	/* * * * * * * * * * * * * * * * * * * * *
+	* @name: #bg.color
+	* @desc: setter for background-color. 
+	* @params: @image 	<color>
+	* * * * * * * * * * * * * * * * * * * * * */
+	.color(@color) {
+		background-color: @color;
+	}
+}

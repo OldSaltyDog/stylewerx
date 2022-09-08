@@ -1,0 +1,47 @@
+#flex {
+	.row(@il: false; @rev: false) {
+		#disp.flex(@il);
+		& when (@rev) {
+			flex-flow: row-reverse nowrap;
+		}
+		
+		& when not (@rev) {
+			flex-flow: row nowrap;
+		}
+	}
+
+	.col(@il: false; @rev: false) {
+		#disp.flex(@il);
+		& when (@rev) {
+			flex-flow: column-reverse nowrap;
+		}
+		
+		& when not (@rev) {
+			flex-flow: column nowrap;
+		}
+	}
+	.panel() {
+		.x(@il: false; @rev: false) {
+			#disp.flex(@il);
+			& when (@rev) {
+				flex-flow: row-reverse wrap;
+			}
+			
+			& when not (@rev) {
+				flex-flow: row wrap;
+			}
+		}
+		
+		.y(@il: false; @rev: false) {
+			#disp.flex(@il);
+			& when (@rev) {
+				flex-flow: column-reverse wrap;
+			}
+			
+			& when not (@rev) {
+				flex-flow: column wrap;
+			}
+		}
+	}
+}
+

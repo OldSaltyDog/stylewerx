@@ -1,0 +1,26 @@
+#eg {
+
+	.ellipse(@cp) {
+		@eg: radial-gradient(ellipse, @cp);
+	}
+
+	.ellipse(@cp; @ext) {
+		@eg: radial-gradient(ellipse @ext, @cp);
+	}
+
+	.ellipse(@cp; @ext; @ctr) {
+		@eg: radial-gradient(ellipse @extent at @ctr, @cp);
+	}
+
+	.ellipse-r(@cp) {
+		@eg: repeating-radial-gradient(ellipse, @cp);
+	}
+
+	.ellipse-r(@cp; @ext) {
+		@eg: repeating-radial-gradient(ellipse @ext, @cp);
+	}
+
+	.ellipse-r(@cp; @ext; @ctr) {
+		@eg: repeating-radial-gradient(ellipse @extent at @ctr, @cp);
+	}
+}

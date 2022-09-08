@@ -1,0 +1,52 @@
+/* * * * * * * * * * * * *
+* File: positioning.less
+* Date: 07Jul2022
+* Code: W. Anthony Orr
+* Desc: description 
+* * * * * * * * * * * * */
+#put {
+	
+	.tl(@t; @l) {
+		top: @t;
+		left: @l;
+	}
+	
+	.tr(@t; @r) {
+		top: @t;
+		right: @r;
+	}
+	
+	.bl(@b; @l) {
+		bottom: @b;
+		left: @l;
+	}
+	
+	.br(@b; @r) {
+		bottom: @b;
+		right: @r;
+	}
+
+	.out() {
+		.b(@adj: 0px) {
+			#pos.abs();
+			top: calc(~"100%" + @adj); 
+		}
+		.t(@adj: 0px) {
+			#pos.abs();
+			bottom: calc(~"100%" + @adj); 
+		}
+		.l(@adj: 0px) {
+			#pos.abs();
+			right: calc(~"100%" + @adj); 
+		}
+		.r(@adj: 0px) {
+			#pos.abs();
+			left: calc(~"100%" + @adj); 
+		}
+	}
+
+	.out(@side; @space: 0) {
+		.ailb();
+		@{side}: calc(~"100%" + @space);
+	}
+}

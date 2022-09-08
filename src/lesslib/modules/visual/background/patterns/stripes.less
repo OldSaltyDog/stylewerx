@@ -1,0 +1,6 @@
+#bg {
+	.stripes(@deg; @clr1; @clr2; @w1; @full-w) {
+		@stop: @clr1 0, @clr1 @w1, @clr2 @w1, @clr2 @full-w;
+		#bg.add(#grad.linear-r(@deg, @stop)[]);
+	}
+}

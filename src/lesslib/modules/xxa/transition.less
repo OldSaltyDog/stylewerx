@@ -1,0 +1,33 @@
+.xi(@prop: all; @dur: 200ms; @tf: linear; @delay: 0ms) {
+	transition+: @prop @dur @tf;
+
+	& when(@delay > 0) {
+		transition+_: @delay;
+	}
+}
+
+#xi {
+	.bg(@dur: 200ms; @tf: linear; @delay: 0ms) {
+		.xi(background, @arguements);
+	}
+
+	.bgPos(@dur: 200ms; @tf: linear; @delay: 0ms) {
+		.xi(box-shadow, @arguements);
+	}
+
+	.bs(@dur: 200ms; @tf: linear; @delay: 0ms) {
+		.xi(box-shadow, @arguements);
+	}
+
+	.ts(@dur: 200ms; @tf: linear; @delay: 0ms) {
+		.xi(text-shadow, @arguements);
+	}
+
+	.fc(@dur: 200ms; @tf: linear; @delay: 0ms) {
+		.xi(color, @arguements);
+	}
+
+	.bs(@dur: 200ms; @tf: linear; @delay: 0ms) {
+		.xi(box-shadow, @arguements);
+	}
+}

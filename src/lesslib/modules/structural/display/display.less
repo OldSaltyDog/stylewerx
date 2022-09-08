@@ -1,0 +1,35 @@
+#disp {
+	.none() {
+		display: none;
+	}
+
+	.block(@il: false) {
+		#disp.il(block, @il);
+	}
+
+	.grid(@il: false) {
+		#disp.il(grid, @il);
+	}
+
+	.flex(@il: false) {
+		#disp.il(flex, @il);
+	}
+
+	.flow-root() {
+		display: flow-root;
+	}
+
+	.li() {
+		display: list-item;
+	}
+
+	.il(@dt; @il: false) {
+		& when (@il) {
+			display: ~"inline-@{dt}";
+		} 
+
+		& when not(@il) {
+			display: @dt;
+		}
+	}
+}

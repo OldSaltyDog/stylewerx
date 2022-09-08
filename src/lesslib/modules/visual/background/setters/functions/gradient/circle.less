@@ -1,0 +1,33 @@
+/* * * * * * * * * * * * * * * * * * * *
+ * Page: circle.less
+ * Date: 13Jul2022
+ * Code: WA Orr
+ * Desc: Radial gradient function setter for elliptical gradients
+ * * * * * * * * * * * * * * * * * * * */
+
+#grad {
+
+	.circle(@stoplist) {
+		@cg: radial-gradient(circle, @stoplist);
+	}
+
+	.circle(@stoplist; @ext) {
+		@cg: radial-gradient(circle @extent, @stoplist);
+	}
+
+	.circle(@stoplist; @ext; @origin) {
+		@cg: radial-gradient(circle @extent at @origin, @stoplist);
+	}
+
+	.circle-r(@stoplist) {
+		@cg: radial-gradient(circle, @stoplist);
+	}
+
+	.circle-r(@stoplist; @ext) {
+		@cg: radial-gradient(circle @extent, @stoplist);
+	}
+
+	.circle-r(@stoplist; @ext; @origin) {
+		@cg: radial-gradient(circle @extent at @origin, @stoplist);
+	} 
+}

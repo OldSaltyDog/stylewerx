@@ -1,0 +1,36 @@
+#text {
+	.center() {
+		text-align: center;
+	}
+
+	.right() {
+		text-align: right;
+	}
+
+	.justify() {
+		text-align: justify;
+	}
+
+	.middle() {
+		vertical-align: middle;
+	}
+
+	.top() {
+		vertical-align: top;
+	}
+
+	.bottom() {
+		vertical-align: bottom;
+	}
+
+	.indent(@val; @pad: 0) {
+		text-indent: @val;
+		& when (@pad > 0) {
+			padding-right: @pad;
+		}
+	}
+
+	.nowrap() {
+		white-space: nowrap;
+	}
+}

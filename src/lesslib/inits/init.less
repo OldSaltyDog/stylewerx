@@ -1,0 +1,59 @@
+.reset() {
+	html, body, header, footer, article, section, summary, details, 
+	aside, nav, address, figure, figcaption, div, span, form, legend, 
+	fieldset, output, input, select, textarea, button, reset, submit, 
+	label, time, blockquote, pre, cite, code, h1, h2, h3, h4, h5, h6, 
+	hgroup, table, caption, tbody, tfoot, thead, tr, th, td, a, b, u, 
+	i, p, q, s, abbr  {
+		@reset();
+	}
+	
+	input,
+	output,
+	textarea {
+		@no-bomp();
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	[type=number] {
+		-moz-appearance: textfield;
+	}
+
+	a {
+		&:not([class]),
+		&:hover,
+		&:visited,
+		&:active {
+			text-decoration: none;
+		}
+	}
+
+	[type="checkbox"],
+	[type="radio"] {
+		.bye();
+	}
+
+	:focus {
+		outline: 0;
+	}
+}
+
+@no-bomp: {
+	border: 0;
+	outline: 0;
+	margin: 0;
+	padding: 0;
+}
+
+@reset: {
+	@no-bomp();
+	font-size: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	background: @t;
+}

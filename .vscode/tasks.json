@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Less Compile Main",
+			"type": "shell",
+			"command": "lessc --math=strict ./src/stylewerx.main.less ./demos/assets/css/stylewerx.css --source-map-include-source --source-map=./demos/assets/css/stylewerx.map",
+			"group": "build"
+		},
+		{
+			"label": "Less Compile Structure",
+			"type": "shell",
+			"command": "lessc --math=strict ./src/swx.structure.less ./demos/assets/css/swx.structure.css --source-map-include-source --source-map=./demos/assets/css/structure.map",
+			"group": "build"
+		}
+	]
+}

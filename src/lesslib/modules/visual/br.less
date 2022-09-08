@@ -1,0 +1,66 @@
+
+/* * * * * * * * * * * * * * * * * * * *
+ * Page: border.radius.less
+ * Date: 13Jul2022
+ * Code: WA Orr
+ * Desc: border-radius setter mixins 
+ * * * * * * * * * * * * * * * * * * * */
+#br {
+	.set(@val1) {
+		border-radius: @val1;
+	}
+
+	/* * * * * * * * * * * * * * * * * 
+	* Name: #br.diag() 
+	* Desc: Value setters for border-radius 
+	* Params:  
+	*   @val1: top-left & bottom-right
+	*   @val2: top-right & bottom-left
+	* * * * * * * * * * * * * * * * */
+	.diag(@val1; @val2) {
+		border-radius: @val1 @val2;
+	}
+
+	/* * * * * * * * * * * * * * * * *
+	* Name: #br.split() 
+	* Desc: Value setters for border-radius 
+	* Params:  
+	*   @poles: <length>{1,4}
+	*   @ends: <length>{1,4}
+	* * * * * * * * * * * * * * * * */
+	.split(@poles; @ends) {
+		border-radius: @poles ~'/'@ends;
+	}
+
+	.tl(@top) {
+		border-top-left-radius: @top;
+	}
+
+	.tl(@top; @left) {
+		border-top-left-radius: @top @left;
+	}
+
+	.tr(@top) {
+		border-top-right-radius: @top;
+	}
+
+	.tr(@top; @right) {
+		border-top-right-radius: @top @right;
+	}
+
+	.bl(@btm) {
+		border-bottom-left-radius: @btm;
+	}
+
+	.bl(@btm; @left) {
+		border-bottom-left-radius: @btm @left;
+	}
+
+	.br(@btm) {
+		border-bottom-right-radius: @btm;
+	}
+
+	.br(@btm; @right) {
+		border-bottom-right-radius: @btm @right;
+	}
+}
