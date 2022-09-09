@@ -3,6 +3,10 @@
 		line-height: @lh;
 	}
 
+	.inherit() {
+		line-height: inherit;
+	}
+
 	.step(@step) {
 		line-height-step: @step;
 	}
@@ -11,7 +15,7 @@
 		height: (@lh * @fs);
 	}
 
-	.from-h(@lh; @h) {
+	.from-h(@lh; @fs) {
 		line-height: (@lh/@fs);
 	}
 }

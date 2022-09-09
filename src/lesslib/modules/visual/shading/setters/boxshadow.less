@@ -7,7 +7,12 @@
 }
 
 #bs {
-	.border(@size; @clr) {
-		.bs(0 0 0 @size @clr);
+	.frame(@size; @clr) {
+		.bs(0 0 0 @size @clr; true);
+	}
+
+	.frame-sides(@size; @clr) {
+		.bs(@size 0 0 0 @clr; true);
+		.bs(-@size 0 0 0 @clr; true);
 	}
 }
