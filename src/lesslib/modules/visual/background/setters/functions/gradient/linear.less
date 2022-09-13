@@ -15,7 +15,7 @@
 	*	@colorstop: colorstop list
 	* * * * * * * * * * * * */
 	.linear(@cs; @angle: 180deg) {
-		@lg: linear-gradient(@angle, @cs);
+		#bg.add(linear-gradient(@angle, @cs));
 	}
 
 	/* * * * * * * * * * * * *
@@ -26,6 +26,6 @@
 	*	@cs: cs list
 	* * * * * * * * * * * * */
 	.linear-r(@angle: 180deg; @cs) {
-		@lg-r: repeating-linear-gradient(@angle, @cs);
+		#bg.add(repeating-linear-gradient(@angle, @cs));
 	}
 }

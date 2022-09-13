@@ -8,26 +8,26 @@
 #grad {
 
 	.circle(@stoplist) {
-		@cg: radial-gradient(circle, @stoplist);
+		#bg.add(radial-gradient(circle, @stoplist));
 	}
 
 	.circle(@stoplist; @ext) {
-		@cg: radial-gradient(circle @extent, @stoplist);
+		#bg.add(radial-gradient(circle @extent, @stoplist));
 	}
 
 	.circle(@stoplist; @ext; @origin) {
-		@cg: radial-gradient(circle @extent at @origin, @stoplist);
+		#bg.add(radial-gradient(circle @extent at @origin, @stoplist));
 	}
 
 	.circle-r(@stoplist) {
-		@cg: radial-gradient(circle, @stoplist);
+		#bg.add(radial-gradient(circle, @stoplist));
 	}
 
 	.circle-r(@stoplist; @ext) {
-		@cg: radial-gradient(circle @extent, @stoplist);
+		#bg.add(radial-gradient(circle @extent, @stoplist));
 	}
 
 	.circle-r(@stoplist; @ext; @origin) {
-		@cg: radial-gradient(circle @extent at @origin, @stoplist);
+		#bg.add(radial-gradient(circle @extent at @origin, @stoplist));
 	} 
 }
