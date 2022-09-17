@@ -1,0 +1,28 @@
+#xi {
+
+	.rotate(@deg; @dur: 200ms; @tf: linear) {
+		#xf.rotate(@deg);
+		.xi(transform; @dur; @tf);
+	}
+
+	.rotate() {
+		.x(@x: 1) {
+			#xf.rotate(rotateX(@x));
+			.xi(transform; @dur; @tf);
+		}
+		
+		.y(@y: 1) {
+			#xf.rotate(rotateY(@y));
+			.xi(transform; @dur; @tf);
+		}
+		
+		.z(@z: 1) {
+			#xf.rotate(rotateZ(@z));
+			.xi(transform; @dur; @tf);
+		}
+		._3d(@x: 0; @y: 0; @z: 0; @deg: 0) {
+			#xf.rotate(rotate3d(@arguments));
+			.xi(transform; @dur; @tf);
+		}
+	}
+}
