@@ -13,16 +13,41 @@
 		padding: @pad;
 	}
 
+	.stretch-start() {
+		#jc.fs();
+		#ai.str();
+		#ac.str();
+	}
+
 	.stretch() {
 		#jc.str();
 		#ai.str();
 		#ac.str();
 	}
 
+	.spread() {
+		#jc.sa();
+		#ai.c();
+		#ac.sa();
+	}
+
+	.spread(@gap) {
+		#jc.sa();
+		#ai.c();
+		#ac.sa();
+		#flex.gp(@gap);
+	}
+
 	.split(@nth) {
+		#jc.fs();
 		&:nth-child(@{nth}) {
 			margin-left: auto;
 		}
+	}
+
+	.gp(@gap) {
+		gap: @gap;
+		padding: @gap;
 	}
 }
 
