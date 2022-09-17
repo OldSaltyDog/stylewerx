@@ -5,9 +5,24 @@
 		#ac.c();
 	}
 
+	.middle(@gap; @pad) {
+		#jc.c();
+		#ai.c();
+		#ac.c();
+		gap: @gap;
+		padding: @pad;
+	}
+
 	.stretch() {
+		#jc.str();
 		#ai.str();
 		#ac.str();
+	}
+
+	.split(@nth) {
+		&:nth-child(@{nth}) {
+			margin-left: auto;
+		}
 	}
 }
 

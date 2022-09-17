@@ -6,17 +6,13 @@
 	}
 }
 
+.bsi(@list) {
+	box-shadow+: @list inset;
+}
+
 #bs {
-	.frame(@size; @clr) {
-		.bs(0 0 0 @size @clr; true);
-	}
-
-	.frame-sides(@size; @clr) {
-		.bs(@size 0 0 0 @clr; true);
-		.bs(-@size 0 0 0 @clr; true);
-	}
-
-	.bevel() {
+	.x(@x; @clr; @blur: 0; @spr: 0) {
 		
 	}
 }
+
