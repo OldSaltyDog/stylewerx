@@ -1,40 +1,38 @@
-#hl {
-	.li() {
-		.l(@clr; @blur: 0) {
-			&:not(:first-of-type) {
-				.bsi(1px 0 0 @blur @clr);
-			}
+#sep {
+	.l(@clr; @blur: 0) {
+		&:not(:first-of-type) {
+			.bsi(1px 0 0 @blur @clr);
 		}
-		.r(@clr; @blur: 0) {
-			&:not(:first-of-type) {
-				.bsi(-1px 0 0 @blur @clr);
-			}
+	}
+	.r(@clr; @blur: 0) {
+		&:not(:first-of-type) {
+			.bsi(-1px 0 0 @blur @clr);
 		}
-		.t(@clr; @blur: 0) {
-			&:not(:first-of-type) {
-				.bsi(0 1px @blur 0 @clr);
-			}
+	}
+	.t(@clr; @blur: 0) {
+		&:not(:first-of-type) {
+			.bsi(0 1px @blur 0 @clr);
 		}
-		.b(@clr; @blur: 0) {
-			&:not(:first-of-type) {
-				.bsi(0 -1px @blur 0 @clr);
-			}
+	}
+	.b(@clr; @blur: 0) {
+		&:not(:first-of-type) {
+			.bsi(0 -1px @blur 0 @clr);
 		}
-		.x(@clr-t; @clr-b; @blur: 0) {
-			&:not(:first-of-type) {
-				.bsi(1px 0 0 @blur @clr-t);
-			}
-			&:not(:last-of-type) {
-				.bsi(-1px 0 0 @blur @clr-b);
-			}
+	}
+	.x(@clr-t; @clr-b; @blur: 0) {
+		&:not(:first-of-type) {
+			.bsi(1px 0 0 @blur @clr-t);
 		}
-		.y(@clr-t; @clr-b; @blur: 0) {
-			&:not(:first-of-type) {
-				.bsi(0 1px @blur 0 @clr-t);
-			}
-			&:not(:last-of-type) {
-				.bsi(0 -1px @blur 0 @clr-b);
-			}
+		&:not(:last-of-type) {
+			.bsi(-1px 0 0 @blur @clr-b);
+		}
+	}
+	.y(@clr-t; @clr-b; @blur: 0) {
+		&:not(:first-of-type) {
+			.bsi(0 1px @blur 0 @clr-t);
+		}
+		&:not(:last-of-type) {
+			.bsi(0 -1px @blur 0 @clr-b);
 		}
 	}
 }

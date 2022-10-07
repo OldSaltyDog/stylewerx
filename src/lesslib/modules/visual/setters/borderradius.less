@@ -1,0 +1,36 @@
+
+/* * * * * * * * * * * * * * * * * * * *
+ * Page: border.radius.less
+ * Date: 13Jul2022
+ * Code: WA Orr
+ * Desc: border-radius setter mixins 
+ * * * * * * * * * * * * * * * * * * * */
+#br {
+	.set(@val1) {
+		border-radius: @val1;
+	}
+
+	.top(@val) {
+		border-radius: @val @val 0 0;
+	}
+
+	.right(@val) {
+		border-radius: 0 @val @val 0;
+	}
+
+	.bottom(@val) {
+		border-radius: 0 0 @val @val;
+	}
+
+	.left(@val) {
+		border-radius: @val 0 0 @val;
+	}
+
+	.diag(@tr-bl; @tl-br) {
+		border-radius: @tr-bl @tl-br;
+	}
+
+	.tb-lr(@tb; @lr) {
+		border-radius: @tb ~'/'@lr;
+	}
+}

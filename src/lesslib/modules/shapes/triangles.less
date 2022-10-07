@@ -1,31 +1,27 @@
 #tri {
 	.up(@size; @clr) {
-		.ab();
-		#size.none();
+		.ab-0();
 		#bdr.l(@t, (@size/2), solid);
 		#bdr.r(@t, (@size/2), solid);
 		#bdr.b(@clr, @size, solid);
 	}
 
 	.down(@size; @clr) {
-		.ab();
-		#size.none();
+		.ab-0();
 		#bdr.l(@t, (@size/2), solid);
 		#bdr.r(@t, (@size/2), solid);
 		#bdr.t(@clr, @size, solid);
 	}
 
 	.left(@size; @clr) {
-		.ab();
-		#size.none();
+		.ab-0();
 		#bdr.b(@t, (@size/2), solid);
 		#bdr.t(@t, (@size/2), solid);
 		#bdr.r(@clr, @size, solid);
 	}
 
 	.right(@size; @clr) {
-		.ab();
-		#size.none();
+		.ab-0();
 		#bdr.b(@t, (@size/2), solid);
 		#bdr.t(@t, (@size/2), solid);
 		#bdr.l(@clr, @size, solid);
