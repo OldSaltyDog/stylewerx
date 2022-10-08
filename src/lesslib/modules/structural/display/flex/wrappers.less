@@ -1,0 +1,15 @@
+#flex() {
+	.wrap() {
+		.x(@gap: 0; @pad: false) {
+			display: inline-flex;
+			#flex.gap(@gap, @pad);
+			flex: none;
+		}
+
+		.y(@gap: 0; @pad: false) {
+			#flex.col(@il: true);
+			#flex.gap(@gap, @pad);
+			flex: none;
+		}
+	}
+}

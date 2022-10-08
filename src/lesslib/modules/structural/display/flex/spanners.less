@@ -1,0 +1,15 @@
+#flex() {
+	.span() {
+		.x(@gap: 0; @pad: false) {
+			display: flex;
+			#flex.gap(@gap, @pad);
+			flex: 1;
+		}
+
+		.y(@gap: 0; @pad: false) {
+			#flex.col();
+			#flex.gap(@gap, @pad);
+			flex: 1;
+		}
+	}
+}

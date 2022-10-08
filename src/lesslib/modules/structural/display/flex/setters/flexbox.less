@@ -2,22 +2,22 @@
 	.row(@il: false; @rev: false) {
 		#disp.flex(@il);
 		& when (@rev) {
-			flex-flow: row-reverse nowrap;
+			flex-direction: row-reverse;
 		}
 		
 		& when not (@rev) {
-			flex-flow: row nowrap;
+			flex-direction: row;
 		}
 	}
 
 	.col(@il: false; @rev: false) {
 		#disp.flex(@il);
 		& when (@rev) {
-			flex-flow: column-reverse nowrap;
+			flex-direction: column-reverse;
 		}
 		
 		& when not (@rev) {
-			flex-flow: column nowrap;
+			flex-direction: column;
 		}
 	}
 	.panel() {
@@ -41,6 +41,14 @@
 			& when not (@rev) {
 				flex-flow: column wrap;
 			}
+		}
+	}
+
+	.gap(@gap: 0; @pad: false) when (@gap > 0) {
+		gap: @gap;
+
+		& when (@pad) {
+			.pad(@gap);
 		}
 	}
 }
