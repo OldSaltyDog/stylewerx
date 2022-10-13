@@ -1,5 +1,8 @@
 #hl {
-	.frame {
+	.frame(@size; @clr) {
+		.bsi(@size 0 0 0 @clr);
+	}
+	.frame() {
 		.r(@size; @clr) {
 			.bsi(-@size 0 0 0 @clr);
 		}
