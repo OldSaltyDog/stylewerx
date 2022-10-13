@@ -12,13 +12,18 @@
 		position: relative;
 	}
 
-	.rel(@w; @h) {
+	.rel(@l; @t) {
 		position: relative;
-		#size.set(@w, @h);
+		#put.tl(@w, @h);
 	}
 
 	.abs() {
 		position: absolute;
+	}
+
+	.abs(@l; @t) {
+		position: absolute;
+		#put.tl(@w, @h);
 	}
 
 	.fixed(@t; @l) {
