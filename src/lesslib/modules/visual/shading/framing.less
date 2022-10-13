@@ -1,27 +1,25 @@
-#hl {
-	.frame(@size; @clr) {
+#frame {
+	.all(@size; @clr) {
 		.bsi(@size 0 0 0 @clr);
 	}
-	.frame() {
-		.r(@size; @clr) {
-			.bsi(-@size 0 0 0 @clr);
-		}
-		.l(@size; @clr) {
-			.bsi(@size 0 0 0 @clr);
-		}
-		.b(@size; @clr) {
-			.bsi(0 -@size 0 0 @clr);
-		}
-		.t(@size; @clr) {
-			.bsi(0 @size 0 0 @clr);
-		}
-		.x(@size; @clr) {
-			.bsi(@size 0 0 0 @clr);
-			.bsi(-@size 0 0 0 @clr);
-		}
-		.y(@size; @clr) {
-			.bsi(0 @size 0 0 @clr);
-			.bsi(0 -@size 0 0 @clr);
-		}
+	.r(@size; @clr) {
+		.bsi(-@size 0 0 0 @clr);
+	}
+	.l(@size; @clr) {
+		.bsi(@size 0 0 0 @clr);
+	}
+	.b(@size; @clr) {
+		.bsi(0 -@size 0 0 @clr);
+	}
+	.t(@size; @clr) {
+		.bsi(0 @size 0 0 @clr);
+	}
+	.x(@size; @clr) {
+		.bsi(@size 0 0 0 @clr);
+		.bsi(-@size 0 0 0 @clr);
+	}
+	.y(@size; @clr) {
+		.bsi(0 @size 0 0 @clr);
+		.bsi(0 -@size 0 0 @clr);
 	}
 }

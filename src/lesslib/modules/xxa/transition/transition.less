@@ -7,27 +7,74 @@
 }
 
 #xi {
-	.bg(@dur: 200ms; @tf: linear; @delay: 0ms) {
-		.xi(background, @arguements);
+
+	.left() {
+		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
+			.xi(left, @arguments);
+		}
+	
+		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
+			.xi(left, @arguments);
+		}
 	}
 
-	.bgPos(@dur: 200ms; @tf: linear; @delay: 0ms) {
-		.xi(box-shadow, @arguements);
+	.bg() {
+		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
+			.xi(background, @arguments);
+		}
+	
+		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
+			.xi(background, @arguments);
+		}
 	}
 
-	.bs(@dur: 200ms; @tf: linear; @delay: 0ms) {
-		.xi(box-shadow, @arguements);
+	.bg-pos() {
+		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
+			.xi(background-position, @arguments);
+		}
+	
+		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
+			.xi(background-position, @arguments);
+		}
 	}
 
-	.ts(@dur: 200ms; @tf: linear; @delay: 0ms) {
-		.xi(text-shadow, @arguements);
+	.bs() {
+		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
+			.xi(box-shadow, @arguments);
+		}
+	
+		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
+			.xi(box-shadow, @arguments);
+		}
 	}
 
-	.fc(@dur: 200ms; @tf: linear; @delay: 0ms) {
-		.xi(color, @arguements);
+	.ts() {
+		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
+			.xi(text-shadow, @arguments);
+		}
+	
+		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
+			.xi(text-shadow, @arguments);
+		}
 	}
 
-	.bs(@dur: 200ms; @tf: linear; @delay: 0ms) {
-		.xi(box-shadow, @arguements);
+	.fc() {
+		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
+			.xi(color, @arguments);
+		}
+	
+		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
+			.xi(color, @arguments);
+		}
+	}
+
+	.bs() {
+		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
+			.xi(box-shadow, @arguments);
+		}
+	
+		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
+			.xi(box-shadow, @arguments);
+		}
 	}
 }
