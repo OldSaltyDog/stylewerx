@@ -12,9 +12,21 @@
 	#pos.abs();
 }
 
+.ab(@w; @h) {
+	#disp.block();
+	#pos.abs();
+	#size.set(@w, @h);
+}
+
 .ailb() {
 	#disp.block(true);
 	#pos.abs();
+}
+
+.ailb(@w; @h) {
+	#disp.block(true);
+	#pos.abs();
+	#size.set(@w, @h);
 }
 
 .rb() {
@@ -22,7 +34,30 @@
 	#pos.rel();
 }
 
+.rb(@w; @h) {
+	#disp.block();
+	#pos.rel();
+	#size.set(@w, @h);
+}
+
 .rilb() {
 	#disp.block(true);
 	#pos.rel();
+}
+
+.rilb(@w; @h) {
+	#disp.block(true);
+	#pos.rel();
+	#size.set(@w, @h);
+}
+
+.rf() {
+	display: flex;
+	#pos.rel();
+}
+
+.rf(@w; @h) {
+	display: flex;
+	#pos.rel();
+	#size.set(@w, @h);
 }
