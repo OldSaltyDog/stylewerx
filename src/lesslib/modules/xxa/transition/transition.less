@@ -8,73 +8,13 @@
 
 #xi {
 
-	.left() {
-		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
-			.xi(left, @arguments);
-		}
-	
-		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
-			.xi(left, @arguments);
-		}
+	.in(@prop; @val; @dur: @xi-dur; @tf: @xi-tf-in) {
+		${prop}: @val;
+		.xi(@prop, @arguments);
 	}
-
-	.bg() {
-		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
-			.xi(background, @arguments);
-		}
 	
-		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
-			.xi(background, @arguments);
-		}
-	}
-
-	.bg-pos() {
-		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
-			.xi(background-position, @arguments);
-		}
-	
-		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
-			.xi(background-position, @arguments);
-		}
-	}
-
-	.bs() {
-		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
-			.xi(box-shadow, @arguments);
-		}
-	
-		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
-			.xi(box-shadow, @arguments);
-		}
-	}
-
-	.ts() {
-		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
-			.xi(text-shadow, @arguments);
-		}
-	
-		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
-			.xi(text-shadow, @arguments);
-		}
-	}
-
-	.fc() {
-		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
-			.xi(color, @arguments);
-		}
-	
-		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
-			.xi(color, @arguments);
-		}
-	}
-
-	.bs() {
-		.in(@dur: @xi-dur; @tf: @xi-tf-in; @delay: 0ms) {
-			.xi(box-shadow, @arguments);
-		}
-	
-		.out(@dur: @xi-dur; @tf: @xi-tf-out; @delay: 0ms) {
-			.xi(box-shadow, @arguments);
-		}
+	.out(@prop; @val; @dur: @xi-dur; @tf: @xi-tf-out) {
+		${prop}: @val;
+		.xi(@prop, @arguments);
 	}
 }
