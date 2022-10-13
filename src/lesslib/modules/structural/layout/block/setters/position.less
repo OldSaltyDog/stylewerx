@@ -3,8 +3,18 @@
 		position: static;
 	}
 
+	.static(@w; @h) {
+		position: static;
+		#size.set(@w, @h);
+	}
+
 	.rel() {
 		position: relative;
+	}
+
+	.rel(@w; @h) {
+		position: relative;
+		#size.set(@w, @h);
 	}
 
 	.abs() {
