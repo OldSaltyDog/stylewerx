@@ -25,4 +25,9 @@
 		.bsi(@w @w @blur 0 @clr1);
 		.bsi(-@w -@w @blur 0 @clr2);
 	}
+
+	.softedge(@in: 1px; @out: 2px) {
+		.bs(0 0 @in 0 @fb-10 inset);
+		.bs(0 0 @out 0 @fb-20);
+	}
 }
