@@ -23,10 +23,10 @@
 		vertical-align: bottom;
 	}
 
-	.indent(@val; @pad: 0) {
+	.indent(@val; @pad: false) {
 		text-indent: @val;
-		& when (@pad > 0) {
-			padding-right: @pad;
+		& when (@pad) {
+			padding-right: @val;
 		}
 	}
 
