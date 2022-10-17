@@ -19,6 +19,10 @@
 		.bs(0 @y @blur @spr @clr);
 	}
 
+	.edge(@blur; @spread; @in: false; @clr: @fb-25) {
+		.bs(0 0 @blur @spread @clr; @in);
+	}
+
 	.spread(@w; @clr) {
 		.bs(0 0 0 @w @clr);
 	}
