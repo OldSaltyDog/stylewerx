@@ -1,41 +1,96 @@
 #hl {
 	
+	/* MIXIN
+	*  name: #hl.l
+	*  params: @clr-color, @blur-number (0)
+	*  desc: shadow inset in left side
+	--MIXIN */  
 	.l(@clr; @blur: 0) {
 		.bsi(1px 0 @blur 0 @clr);
-	}		
+	}
+
+	/* MIXIN
+	*  name: #hl.r
+	*  params: @clr-color, @blur-number (0)
+	*  desc: shadow inset in right side
+	--MIXIN */
 	.r(@clr; @blur: 0) {
 		.bsi(-1px 0 @blur 0 @clr);
-	}		
+	}
+
+	/* MIXIN
+	*  name: #hl.t
+	*  params: @clr-color, @blur-number (0)
+	*  desc: shadow inset on top
+	--MIXIN */
 	.t(@clr; @blur: 0) {
 		.bsi(0 1px @blur 0 @clr);
-	}		
+	}
+
+	/* MIXIN
+	*  name: #hl.b
+	*  params: @clr-color, @blur-number (0)
+	*  desc: shadow inset on bottom
+	--MIXIN */
 	.b(@clr; @blur: 0) {
 		.bsi(0 -1px @blur 0 @clr);
-	}		
+	}
+
+	/* MIXIN
+	*  name: #hl.l
+	*  params: @clr-t -top color, @clr-b -color bottom , @blur -number (0)
+	*  desc: shadow inset on top and bottom
+	--MIXIN */
 	.x(@clr-t; @clr-b; @blur: 0) {
 		.bsi(1px 0 @blur 0 @clr-t);
 		.bsi(-1px 0 @blur 0 @clr-b);
 	}
-	.y(@clr-t; @clr-b; @blur: 0) {
+
+	/* MIXIN
+	*  name: #hl.y
+	*  params: @clr-l - left color, @clr-b - right color , @blur -number (0)
+	*  desc: shadow inset on sides
+	--MIXIN */
+	.y(@clr-l; @clr-r; @blur: 0) {
 		.bsi(0 1px @blur 0 @clr-t);
 		.bsi(0 -1px @blur 0 @clr-b);
 	}
 
+	/* MIXIN
+	*  name: #hl.bevel
+	*  params: @clr1, @clr2, @blur (0)
+	*  desc: applies a beveled effect
+	--MIXIN */
 	.bevel(@clr1; @clr2; @w: 2px; @blur: 0) {
 		.bsi(@w @w @blur 0 @clr1);
 		.bsi(-@w -@w @blur 0 @clr2);
 	}
 
+	/* MIXIN
+	*  name: #hl.raise
+	*  params: none
+	*  desc: applies a light and dark shadow to make the element appear raised up
+	--MIXIN */
 	.raise() {
-		#bs.y(2px 1px 1px @fb-25);
-		#bs.y(-1px 1px 1px @fw-15);
+		.bs(0 2px 1px 1px @fb-25);
+		.bs(1px 1px 1px @fw-15; true);
 	}
 
+	/* MIXIN
+	*  name: #hl.lower
+	*  params: none
+	*  desc: applies a light and dark shadow to make the element lower that the panel raised up
+	--MIXIN */
 	.lower() {
-		#bs.y(-1px 1px 2px @fw-15);
-		#bs.y(1px 1px 1px @fb-25);
+		.bs(0 1px 1px 1px @fb-20 inset);
+		.bs(0 1px 1px 0 @fw-20);
 	}
 
+	/* MIXIN
+	*  name: #hl.softedge
+	*  params: @in, @out
+	*  desc: applies a soft edge to an element
+	--MIXIN */
 	.softedge(@in: 1px; @out: 2px) {
 		.bs(0 0 @in 0 @fb-10 inset);
 		.bs(0 0 @out 0 @fb-20);

@@ -1,10 +1,10 @@
 #bg {
 	.lighten(@clr; @amt: 10) {
-		#grad.linear(@cs: @clr, lighten(@clr, @amt));
+		#grad.linear(@cs: lighten(@clr, @amt), @clr);
 	}
 
 	.darken(@clr; @amt: 10) {
-		#grad.linear(@cs: @clr, darken(@clr, @amt));
+		#grad.linear(@cs: darken(@clr, @amt), @clr);
 	}
 
 	.spin(@clr; @amt: 10) {
@@ -13,6 +13,10 @@
 
 	.sat(@clr; @amt: 10) {
 		#grad.linear(@cs: @clr, saturate(@clr, @amt));
+	}
+
+	.clr-2(@clr1; @clr2) {
+		#grad.linear(@cs: @clr1, @clr2);
 	}
 
 	.split() {

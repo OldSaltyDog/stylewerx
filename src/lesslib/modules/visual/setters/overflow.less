@@ -1,0 +1,18 @@
+#ovf {
+	.hide() {
+		overflow: hidden;
+	}
+
+	.scroll() {
+
+		overflow: @scroll;
+
+		.x() {
+			overflow-x: @scroll;
+		}
+
+		.y() {
+			overflow-y: @scroll;
+		}
+	}
+}

@@ -16,15 +16,19 @@
 	}
 
 	.y(@y; @clr; @blur: 0; @spr: 0) {
-		.bs(0 @y @blur @spr @clr);
+		.bs(@arguments);
 	}
 
 	.edge(@blur; @spread; @in: false; @clr: @fb-25) {
-		.bs(0 0 @blur @spread @clr; @in);
+		.bs(@arguments; @in);
 	}
 
 	.spread(@w; @clr) {
 		.bs(0 0 0 @w @clr);
+	}
+
+	.spr-in(@w; @clr) {
+		.bs(0 0 0 @w @clr; true);
 	}
 }
 
