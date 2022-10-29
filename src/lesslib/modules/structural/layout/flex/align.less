@@ -2,36 +2,16 @@
 	.middle(@gap: 0; @pad: false) {
 		#jc.c();
 		#ai.c();
-		#ac.c();
 		#flex.gap(@gap, @pad);
-	}
-
-	.stretch-start() {
-		#ai.str();
-		#ac.str();
-	}
-
-	.stretch-c(@gap: 0; @pad: false) {
-		#jc.c();
-		#ai.str();
-		#flex.gap(@gap);
 	}
 
 	.stretch() {
 		#jc.str();
-		#ai.str();
 		#ac.str();
 	}
 
-	.spread() {
+	.spread(@gap: 0; @pad: false) {
 		#jc.sa();
-		#ai.c();
-		#ac.sa();
-	}
-
-	.spread(@gap; @pad) {
-		#jc.c();
-		#ai.sa();
 		#ac.sa();
 		#flex.gap(@gap, @pad);
 	}

@@ -1,4 +1,4 @@
-.xi(@prop: all; @dur: 200ms; @tf: linear; @delay: 0ms) {
+.xi(@prop: all; @dur; @tf; @delay: 0ms) {
 	transition+: @prop @dur @tf;
 
 	& when(@delay > 0) {
@@ -8,13 +8,8 @@
 
 #xi {
 
-	.in(@prop; @val; @dur: @xi-dur; @tf: @xi-tf-in) {
-		${prop}: @val;
-		.xi(@prop, @arguments);
-	}
-	
-	.out(@prop; @val; @dur: @xi-dur; @tf: @xi-tf-out) {
-		${prop}: @val;
-		.xi(@prop, @arguments);
+	.set(@prop; @val; @dur; @tf; @delay: 0ms) {
+		@{prop}: @val;
+		.xi(@prop, @val, @dur, @tf, @delay);
 	}
 }
