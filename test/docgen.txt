@@ -1,0 +1,24 @@
+StyleWerx DocGen Def
+
+const swx = {
+	ns: "namespace",
+	
+}
+
+const mixin = {
+	name: "",
+	type: "",
+	params: [
+		name: "",
+		type: "",
+		defVal: ""
+	],
+	usedBy: [
+
+	]
+}
+
+- namespace
+	- mixin
+		- params
+		- properties
