@@ -5,22 +5,22 @@
 	}
 
 	.xlate() {
-		.x(@x; @dur: 200ms; @tf: linear) {
+		.x(@x; @dur; @tf) {
 			#xf.set(translateX(@x));
 			.xi(transform; @dur; @tf);
 		}
 		
-		.y(@y; @dur: 200ms; @tf: linear) {
+		.y(@y; @dur; @tf) {
 			#xf.set(translateY(@y));
 			.xi(transform; @dur; @tf);
 		}
 		
-		.z(@z; @dur: 200ms; @tf: linear) {
+		.z(@z; @dur; @tf) {
 			#xf.set(translateZ(@z));
 			.xi(transform; @dur; @tf);
 		}
 		
-		._3d(@x; @y; @z; @dur: 200ms; @tf: linear) {
+		._3d(@x; @y; @z; @dur; @tf) {
 			#xf.set(translate3d(@x, @y, @z));
 			.xi(transform; @dur; @tf);
 		}

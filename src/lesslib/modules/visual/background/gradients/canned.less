@@ -21,10 +21,10 @@
 
 	.split() {
 		.x(@clr1; @clr2; @split: 50%) {
-			#grad.linear(@cs: @cl1 @split, @clr2 @split; 90deg);
+			#grad.linear(@cs: @clr1 @split, @clr2 @split; 90deg);
 		}
 		.y(@clr1; @clr2; @split: 50%) {
-			#grad.linear(@cs: @cl1 @split, @clr2 @split; 180deg);
+			#grad.linear(@cs: @clr1 @split, @clr2 @split; 180deg);
 		}
 	}
 }
