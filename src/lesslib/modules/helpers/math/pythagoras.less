@@ -1,0 +1,25 @@
+#pyt {
+	.square(@i) {
+		@square: (@i * @i);
+	}
+	.getWidth(@h; @hy) {
+		@h2: #math.sq(@h)[];
+		@hy2: #math.sq(@hy)[];
+		@width: sqrt((@h2 - @hy));
+	}
+
+	.getHeight(@h; @hy) {
+		@h2: #math.sq(@h)[];
+		@hy2: #math.sq(@hy)[];
+		@width: sqrt((@h2 - @hy));
+	}
+/*
+	.getHeight(@w; @hy) {
+		@w2: #math.sq(@w)[];
+		@hy2: #math.sq(@hy)[];
+		@height: sqrt((@w2 - @hy2));
+	}
+*/
+	.getHyp(@w; @h) {
+	}
+}
