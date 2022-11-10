@@ -5,44 +5,44 @@
 	/* * * * * * * * * * * * * * * * * * * * *
 	* @name: #bg.add (shorthand)
 	* @desc: uses the bg properties shorthand
-	* @params: @image 	<string> | <color> | <function>
+	* @params: @img 	<string> | <color> | <function>
 	* * * * * * * * * * * * * * * * * * * * */
-	.add(@image) {
-		background+: @image;
+	.add(@img) {
+		background+: @img;
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * *
 	* @name: #bg.add (shorthand)
 	* @desc: uses the bg properties shorthand
-	* @params: @image 	<string> | <color> | <function>
+	* @params: @img 	<string> | <color> | <function>
 	*		   @pos 	<length> <length>  
 	* * * * * * * * * * * * * * * * * * * * */
-	.add(@image; @pos) {
-		background+: @image @pos;
+	.add(@img; @pos) {
+		background+: @img @pos;
 	}
 
 	/* * * * * * *
 	* @name: #bg.add (shorthand)
 	* @desc: uses the bg properties shorthand
-	* @params: @image 	<string> | <color> | <function>
+	* @params: @img 	<string> | <color> | <function>
 	*		   @pos 	<length> <length>  
 	*		   @size 	<length> <length>  | cover||contain
 	* * * * * * * * * * * * * * * * * * * * */
-	.add(@image; @pos; @size) {
-		background+: @image ~'@{pos}/@{size}';
+	.add(@img; @pos; @size) {
+		background+: @img ~'@{pos}/@{size}';
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * *
 	* @name: #bg.add (shorthand)
 	* @desc: uses the bg properties shorthand
-	* @params: @image 	<string> | <color> | <function>
+	* @params: @img 	<string> | <color> | <function>
 	*		   @pos 	<length> <length>  
 	*		   @size 	<length> <length>  | cover||contain
 	*		   @repeat 	no-repeat||repeat
 	*  * * * * * * * * * * * * * * * * * * * */
-	.add(@image; @pos; @size; @repeat) {
+	.add(@img; @pos; @size; @repeat) {
 		@sp: ~'@{pos}/@{size}';
-		background+: @image @sp @repeat;
+		background+: @img @sp @repeat;
 	}
 
 	/* * * * * * * * * * * * * * * * * * * * *
