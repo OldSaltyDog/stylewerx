@@ -10,6 +10,10 @@
 		border-radius: @val1;
 	}
 
+	.none() {
+		border-radius: 0;
+	}
+
 	.top(@val) {
 		border-radius: @val @val 0 0;
 	}
@@ -36,5 +40,15 @@
 
 	.by-h(@h, @mod: .5) {
 		border-radius: (@h * @mod);
+	}
+
+	.kids-fl(@val) {
+		& :first-child {
+			#br.left(@val);
+		}
+	
+		& :last-child {
+			#br.right(@val);
+		}
 	}
 }
