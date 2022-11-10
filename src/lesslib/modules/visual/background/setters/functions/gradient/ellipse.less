@@ -1,26 +1,26 @@
 #grad {
 
-	.ellipse(@cp) {
-		#bg.add(radial-gradient(ellipse, @cp));
+	.ellipse(@colorstop) {
+		#bg.add(radial-gradient(ellipse, @colorstop));
 	}
 
-	.ellipse(@cp; @ext) {
-		#bg.add(radial-gradient(ellipse @ext, @cp));
+	.ellipse(@colorstop; @ext) {
+		#bg.add(radial-gradient(ellipse @ext, @colorstop));
 	}
 
-	.ellipse(@cp; @ext; @ctr) {
-		#bg.add(radial-gradient(ellipse @extent at @ctr, @cp));
+	.ellipse(@colorstop; @ext; @ctr) {
+		#bg.add(radial-gradient(ellipse @extent at @ctr, @colorstop));
 	}
 
-	.ellipse-r(@cp) {
-		#bg.add(repeating-radial-gradient(ellipse, @cp));
+	.ellipse-r(@colorstop) {
+		#bg.add(repeating-radial-gradient(ellipse, @colorstop));
 	}
 
-	.ellipse-r(@cp; @ext) {
-		#bg.add(repeating-radial-gradient(ellipse @ext, @cp));
+	.ellipse-r(@colorstop; @ext) {
+		#bg.add(repeating-radial-gradient(ellipse @ext, @colorstop));
 	}
 
-	.ellipse-r(@cp; @ext; @ctr) {
-		#bg.add(repeating-radial-gradient(ellipse @extent at @ctr, @cp));
+	.ellipse-r(@colorstop; @ext; @ctr) {
+		#bg.add(repeating-radial-gradient(ellipse @extent at @ctr, @colorstop));
 	}
 }
