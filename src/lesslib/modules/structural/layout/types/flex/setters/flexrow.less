@@ -1,0 +1,12 @@
+#flex {
+	.row(@il: false; @rev: false) {
+		#disp.flex(@il);
+		& when (@rev) {
+			flex-direction: row-reverse;
+		}
+		
+		& when not (@rev) {
+			flex-direction: row;
+		}
+	}
+}
