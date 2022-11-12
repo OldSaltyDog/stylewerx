@@ -1,3 +1,30 @@
 #mar {
+	.none() {
+		margin: 0;
+	}
 	
+	.auto() {
+		margin: auto;
+	}
+
+	.auto() {
+		.t() {
+			margin-top: auto;
+		}
+		.r() {
+			margin-right: auto;
+		}
+		.b() {
+			margin-bottom: auto;
+		}
+		.l() {
+			margin-left: auto;
+		}
+		.x(@y: 0) {
+			margin: auto @y;
+		}
+		.y(@x: 0) {
+			margin: @x auto;
+		}
+	}
 }
