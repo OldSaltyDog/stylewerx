@@ -1,31 +1,35 @@
+//* Namespace: Display (#disp)
+//	@il, inline, boolean, false, sets display type to inline versiom
+//	@dt, display, keyword, , the display type value
 #disp {
+
 	.none() {
 		display: none;
 	}
 
 	.block(@il: false) {
-		#disp.il(block, @il);
+		#disp.inline(block, @il);
 	}
 
 	.grid(@il: false) {
-		#disp.il(grid, @il);
+		#disp.inline(grid, @il);
 	}
 
 	.flex(@il: false) {
-		#disp.il(flex, @il);
+		#disp.inline(flex, @il);
 	}
 
 	.flow-root() {
 		display: flow-root;
 	}
 
-	.li() {
+	.listitem() {
 		display: list-item;
 	}
 
-	.il(@dt; @il: false) {
+	.inline(@dt; @il: false) {
 		& when (@il) {
-			display: ~"inline-@{dt}";
+			display: ~"inline-@{display}";
 		} 
 
 		& when not(@il) {

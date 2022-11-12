@@ -1,4 +1,3 @@
-# stylewerx
-## A Less Mixin Lib
+## StyleWerx ##
+### My own little LESS mixin library 
 
-Working on the readme...

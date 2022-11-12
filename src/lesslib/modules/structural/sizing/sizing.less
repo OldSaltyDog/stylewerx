@@ -32,4 +32,16 @@
 		max-height: @h;
 		max-width: @w;
 	}
+
+	.range() {
+		.x(@min; @max) {
+			min-width: @min;
+			max-width: @max;
+		}
+
+		.y(@min; @max) {
+			min-height: @min;
+			max-height: @max;
+		}
+	}
 }
