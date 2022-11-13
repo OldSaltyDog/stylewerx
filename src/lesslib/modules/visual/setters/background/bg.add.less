@@ -34,11 +34,11 @@
 
 	/* * * * * * * * * * * * * * * * * * * * *
 	* @name: #bg.add (shorthand)
-	* @desc: uses the bg properties shorthand
-	* @params: @img 	<string> | <color> | <function>
-	*		   @pos 	<length> <length>  
-	*		   @size 	<length> <length>  | cover||contain
-	*		   @repeat 	no-repeat||repeat
+	* @desc: sets/appends background shorthand
+	* @params: @img 	(<string> | <color> | <function>)			required	
+	*		   @pos 	(<length> <length>)							optional  
+	*		   @size 	(<length> <length>  | cover | contain)		optional
+	*		   @repeat 	(no-repeat | repeat | repeat-x | repeat-y)
 	*  * * * * * * * * * * * * * * * * * * * */
 	.add(@img; @pos; @size; @repeat) {
 		@sp: ~'@{pos}/@{size}';
