@@ -1,13 +1,10 @@
 #bg {
+	
+	.pos(@vals) when (length = 1) {
+		background-position+: @s;
+	}
+
 	.pos() {
-		.set(@s) {
-			background-position+: @s @s;
-		}
-
-		.set(@x; @y) {
-			background-position+: @x @y;
-		}
-
 		.x(@x) {
 			background-position-x+: @x;
 		}

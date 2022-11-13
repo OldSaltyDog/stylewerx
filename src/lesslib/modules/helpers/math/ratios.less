@@ -1,0 +1,9 @@
+.ratio-4-3(@w: 0; @h: 0) {
+	&  when (@w > 0) {
+		height: round(@w*.75);
+	}
+
+	&  when (@h > 0) {
+		width: floor(@w*(4/3));
+	}
+}

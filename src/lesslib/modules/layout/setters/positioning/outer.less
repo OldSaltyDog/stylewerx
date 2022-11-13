@@ -1,24 +1,22 @@
-/*
- * Outer Positioning
- * Outer placement from parent
- * params
- *		@mod: <length> Distance from parent border
- * */
 #pos {
 	// Align element top to parent bottom
 	.under(@mod: 0) {
+		.ab();
 		top: calc(~"100%" + @mod); 
 	}
 	// Align element bottom to parent top
 	.over(@mod: 0) {
+		.ab();
 		bottom: calc(~"100%" + @mod); 
 	}
 	// Align element right side to parent left
 	.lead(@mod: 0) {
+		.ab();
 		right: calc(~"100%" + @mod); 
 	}
 	// Align element left to parent right
 	.trail(@mod: 0) {
+		.ab();
 		left: calc(~"100%" + @mod); 
 	}
 }

@@ -1,30 +1,27 @@
 #bg {
-	.lighten(@clr; @amt: 10) {
-		#grad.linear(@cs: lighten(@clr, @amt), @clr);
+
+	.lg(@clr1; @clr2; @angle: 180deg) {
+		#grad.linear(@cs: @clr1, @clr2; @angle);
 	}
 
-	.darken(@clr; @amt: 10) {
-		#grad.linear(@cs: darken(@clr, @amt), @clr);
-	}
-
-	.spin(@clr; @amt: 10) {
-		#grad.linear(@cs: @clr, spin(@clr, @amt));
-	}
-
-	.sat(@clr; @amt: 10) {
-		#grad.linear(@cs: @clr, saturate(@clr, @amt));
-	}
-
-	.clr-2(@clr1; @clr2) {
-		#grad.linear(@cs: @clr1, @clr2);
-	}
-
-	.split() {
-		.x(@clr1; @clr2; @split: 50%) {
-			#grad.linear(@cs: @clr1 @split, @clr2 @split; 90deg);
+	.lg() {
+		.lighten(@clr; @amt: 10; @angle: 180deg) {
+			#grad.linear(@cs: lighten(@clr, @amt), @clr; @angle);
 		}
-		.y(@clr1; @clr2; @split: 50%) {
-			#grad.linear(@cs: @clr1 @split, @clr2 @split; 180deg);
+	
+		.darken(@clr; @amt: 10; @angle: 180deg) {
+			#grad.linear(@cs: darken(@clr, @amt), @clr; @angle);
 		}
+	
+		.spin(@clr; @amt: 10; @angle: 180deg) {
+			#grad.linear(@cs: @clr, spin(@clr, @amt); @angle);
+		}
+	
+		.sat(@clr; @amt: 10; @angle: 180deg) {
+			#grad.linear(@cs: @clr, saturate(@clr, @amt); @angle);
+		}
+	
+		
 	}
+
 }

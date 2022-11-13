@@ -1,0 +1,21 @@
+#bg {
+	.split(@clr1; @clr2; @split: 50%; @angle: 0deg) {
+		@cs: #cs.split(@clr1, @clr2, @split)[];
+		#grad.linear(@cs; @angle);
+	}
+	.split() {
+		.x(@clr1; @clr2; @split: 50%) {
+			@cs: #cs.split(@clr1, @clr2, @split)[];
+			#grad.linear(@cs; 90deg);
+		}
+		.y(@clr1; @clr2; @split: 50%) {
+			#grad.linear(@cs; 180deg);
+		}
+		.d45(@clr1; @clr2; @split: 50%) {
+			#grad.linear(@cs; 45deg);
+		}
+		.d225(@clr1; @clr2; @split: 50%) {
+			#grad.linear(@cs; 225deg);
+		}
+	}
+}
