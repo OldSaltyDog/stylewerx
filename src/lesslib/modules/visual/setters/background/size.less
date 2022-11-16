@@ -1,26 +1,18 @@
 
 #bg {
-	.size() {
+	.size(@size) {
+		background-size+: @size @size;
+	}
+	.quarter() {
+		background-size+: 25% 25%;
+	}
 
-		.set(@s) {
-			background-size+: @s @s;
-		}
+	.half() {
+		background-size+: 50% 50%;
+	}
 
-		.set(@w; @h) {
-			background-size+: @w @h;
-		}
-
-		.quarter() {
-			background-size+: 25% 25%;
-		}
-
-		.half() {
-			background-size+: 50% 50%;
-		}
-
-		.full() {
-			background-size+: 100% 100%;
-		}
+	.full() {
+		background-size+: 100% 100%;
 	}
 
 	.contain() {

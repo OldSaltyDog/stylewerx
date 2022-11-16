@@ -1,0 +1,10 @@
+#pos {
+	.abs() {
+		position: absolute;
+	}
+
+	.abs(@left; @top) {
+		position: absolute;
+		.pos(@left, @top);
+	}
+}

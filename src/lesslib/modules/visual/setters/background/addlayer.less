@@ -1,17 +1,3 @@
-//	background: (bg-color | bg-image) position/bg-size bg-repeat bg-origin bg-clip bg-attachment
-
-/**
- * @mixin: 	.add(@img,...)
- * @ns: 	#bg
- * @desc: 	Overloads for setting the background shortcut
- * @sets:	background: @img <pos>/<size> 
- * @params
- * 		@img*	<string> | <color> | <function>	
- * 		@pos 	<length> <length>
- * 		@size 	<length> <length> | <cover | contain>
- * 		@repeat <no-repeat | repeat | repeat-x | repeat-y>
- */
-
 #bg {
 
 	.add(@img) {
@@ -29,15 +15,5 @@
 	.add(@img; @pos; @size; @repeat) {
 		@sp: ~'@{pos}/@{size}';
 		background+: @img @sp @repeat;
-	}
-
-/**
- * @desc: 	Overloads for setting the background shortcut
- * @sets:	background-color
- * @params
- * 		@clr*	<color>
- */
-	.color(@clr) {
-		background-color: @clr;
 	}
 }

@@ -1,24 +1,14 @@
 // Positioning
-#pos {
-	.up(@up: 0) {
-		top: @up;
-	}
+.pos(@xy) {
+	left: @xy;
+	top: @xy;
+}
 
-	.right(@right: 0) {
-		right: 0;
-	}
+.pos(@x; @y) {
+	left: @x;
+	top: @y;
+}
 
-	.down(@down: 0) {
-		bottom: @down;
-	}
-	
-	.left(@left: 0) {
-		left: @left;
-	}
-
-	.c() {
-		left: 50%;
-		top: 50%;
-		#xf.xlate(-50%, -50%);
-	}
+.pos50() {
+	.pos(50%);
 }
