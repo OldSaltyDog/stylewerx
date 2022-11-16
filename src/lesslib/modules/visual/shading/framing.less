@@ -3,18 +3,6 @@
 		.all(@size; @clr) {
 			.bsi(@size 0 0 0 @clr);
 		}
-		.r(@size; @clr) {
-			.bsi(-@size 0 0 0 @clr);
-		}
-		.l(@size; @clr) {
-			.bsi(@size 0 0 0 @clr);
-		}
-		.b(@size; @clr) {
-			.bsi(0 -@size 0 0 @clr);
-		}
-		.t(@size; @clr) {
-			.bsi(0 @size 0 0 @clr);
-		}
 		.x(@size; @clr) {
 			.bsi(@size 0 0 0 @clr);
 			.bsi(-@size 0 0 0 @clr);
@@ -23,24 +11,24 @@
 			.bsi(0 @size 0 0 @clr);
 			.bsi(0 -@size 0 0 @clr);
 		}
+		.t(@size; @clr) {
+			.bsi(0 @size 0 0 @clr);
+		}
+		.r(@size; @clr) {
+			.bsi(-@size 0 0 0 @clr);
+		}
+		.b(@size; @clr) {
+			.bsi(0 -@size 0 0 @clr);
+		}
+		.l(@size; @clr) {
+			.bsi(@size 0 0 0 @clr);
+		}		
 	}
 
 	.out() {
 		.all(@size; @clr) {
 			.bs(@size 0 0 0 @clr);
 		}
-		.r(@size; @clr) {
-			.bs(-@size 0 0 0 @clr);
-		}
-		.l(@size; @clr) {
-			.bs(@size 0 0 0 @clr);
-		}
-		.b(@size; @clr) {
-			.bs(0 -@size 0 0 @clr);
-		}
-		.t(@size; @clr) {
-			.bs(0 @size 0 0 @clr);
-		}
 		.x(@size; @clr) {
 			.bs(@size 0 0 0 @clr);
 			.bs(-@size 0 0 0 @clr);
@@ -49,5 +37,17 @@
 			.bs(0 @size 0 0 @clr);
 			.bs(0 -@size 0 0 @clr);
 		}
+		.t(@size; @clr) {
+			.bs(0 @size 0 0 @clr);
+		}
+		.r(@size; @clr) {
+			.bs(-@size 0 0 0 @clr);
+		}
+		.b(@size; @clr) {
+			.bs(0 -@size 0 0 @clr);
+		}
+		.l(@size; @clr) {
+			.bs(@size 0 0 0 @clr);
+		}		
 	}
 }
