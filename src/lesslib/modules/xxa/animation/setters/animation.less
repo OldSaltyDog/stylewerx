@@ -1,30 +1,29 @@
-#ani
-{
-	//  name duration timing-function delay iteration-count direction fill-mode play-state;
-	.set(@name; @dur; @tf) {
-		animation: @arguments;
-	}
+.ani(@name; @dur; @tf) {
+	animation: @arguments;
+}
 
-	.set(@name; @dur; @tf; @delay) {
-		animation: @arguments;
-	}
+.ani(@name; @dur; @tf; @delay) {
+	animation: @arguments;
+}
 
-	.set(@name; @dur; @tf; @delay; @count) {
-		animation: @arguments;
-	}
+.ani(@name; @dur; @tf; @delay; @count) {
+	animation: @arguments;
+}
 
-	.set(@name; @dur; @tf; @delay; @count, @dir) {
-		animation: @arguments;
-	}
+.ani(@name; @dur; @tf; @delay; @count, @dir) {
+	animation: @arguments;
+}
 
-	.set(@name; @dur; @tf; @delay; @count, @dir; @fm) {
-		animation: @arguments;
-	}
+.ani(@name; @dur; @tf; @delay; @count, @dir; @fm) {
+	animation: @arguments;
+}
 
-	.set(@name; @dur; @tf; @delay; @count, @dir; @fm; @ps) {
-		animation: @arguments;
-	}
+.ani(@name; @dur; @tf; @delay; @count, @dir; @fm; @ps) {
+	animation: @arguments;
+}
 
+#ani {
+	
 	.name(@s) {
 		animation-name: @s;
 	}

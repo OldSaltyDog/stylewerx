@@ -1,17 +1,25 @@
-#ani {
-	.none() {
-		animation-direction+: none;
+#ani() {
+
+	.dir(@dir) {
+		animation-direction+: @val;
 	}
 
-	.forward() {
-		animation-direction+: forward;
+	.dir() {
+		.none() {
+			animation-direction+: none;
+		}
+	
+		.forward() {
+			animation-direction+: forward;
+		}
+	
+		.reverse() {
+			animation-direction+: reverse;
+		}
+	
+		.both() {
+			animation-direction+: both;
+		}
 	}
-
-	.reverse() {
-		animation-direction+: reverse;
-	}
-
-	.both() {
-		animation-direction+: both;
-	}
+	
 }
