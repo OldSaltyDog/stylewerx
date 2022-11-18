@@ -5,15 +5,3 @@
 		transition+_: @delay;
 	}
 }
-
-#xi {
-
-	.set(@prop; @val; @dur; @tf; @delay: 0ms) {
-		@{prop}: @val;
-		.xi(@prop, @dur, @tf, @delay);
-	}
-
-	.all(@dur; @tf; @delay: 0ms) {
-		
-	}
-}
