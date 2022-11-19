@@ -1,6 +1,11 @@
 .circle(@size) {
 	#size.set(@size);
-	#br.set(50%);
+	.br-50();
+}
+
+.halfround(@size) {
+	#size.set(@size);
+	.br-25();
 }
 
 .egg(@w; @h) {
@@ -10,5 +15,5 @@
 
 .oval(@w; @h) {
 	#size.set(@w, @h);
-	#br.set(50%);
+	.br-50();
 }
