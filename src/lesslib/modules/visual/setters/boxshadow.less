@@ -19,8 +19,12 @@
 		.bs(@arguments);
 	}
 
-	.edge(@blur; @spread; @in: false; @clr: @fb-25) {
-		.bs(@arguments; @in);
+	.edge(@blur: 1px; @spread: 1px; @clr: @fb-25) {
+		.bs(0 0 @blur @spread @clr);
+	}
+
+	.edge-in(@blur: 1px; @spread: 1px; @clr: @fb-25) {
+		.bsi(0 0 @blur @spread @clr);
 	}
 
 	.spread(@w; @clr) {

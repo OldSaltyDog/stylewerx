@@ -12,10 +12,10 @@
 	* @desc: Creates a linear gradient
 	* @params 
 	*	@angle: direction of gradient
-	*	@colorstop: colorstop list
+	*	@cs: colorstop list
 	* * * * * * * * * * * * */
-	.linear(@colorstop; @angle: 180deg) {
-		#bg.add(linear-gradient(@angle, @colorstop));
+	.linear(@cs; @angle: 180deg) {
+		#bg.add(linear-gradient(@angle, @cs));
 	}
 
 	/* * * * * * * * * * * * *
@@ -23,9 +23,9 @@
 	* @desc: Creates a repeating linear gradient
 	* @params 
 	*	@angle: direction of gradient
-	*	@colorstop: cs list
+	*	@cs: cs list
 	* * * * * * * * * * * * */
-	.linear-r(@angle: 180deg; @colorstop) {
-		#bg.add(repeating-linear-gradient(@angle, @colorstop));
+	.linear-r(@cs; @angle: 180deg) {
+		#bg.add(repeating-linear-gradient(@angle, @cs));
 	}
 }
