@@ -6,7 +6,7 @@
 .ab(@w; @h) {
 	#disp.block();
 	#pos.abs();
-	#size.set(@w, @h);
+	.size(@w, @h);
 }
 
 .ailb() {
@@ -17,7 +17,7 @@
 .ailb(@w; @h) {
 	#disp.block(true);
 	#pos.abs();
-	#size.set(@w, @h);
+	.size(@w, @h);
 }
 
 .rb() {
@@ -32,11 +32,11 @@
 .rb(@w; @h) {
 	#disp.block();
 	#pos.rel();
-	#size.set(@w, @h);
+	.size(@w, @h);
 }
 
 .rilb(@w; @h) {
 	#disp.block(true);
 	#pos.rel();
-	#size.set(@w, @h);
+	.size(@w, @h);
 }
