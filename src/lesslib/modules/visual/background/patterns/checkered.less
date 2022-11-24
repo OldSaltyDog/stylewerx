@@ -3,18 +3,18 @@
 		@stops: #stops.hard.mid(@clr1, @clr2);
 		#bg.add(#grad.linear(45deg, @stops)[]);
 		#bg.add(#grad.linear(225deg, @stops)[]; (@size/2));
-		#bg.size.set(@size);
+		#bg.size(@size);
 	}
 
 	.checkered2(@clr1; @size; @clr2: @t) {
 		@stops: @clr1 0 90deg, @clr2 90deg 180deg, @clr1 180deg 270deg, @clr2 270deg 360deg;
 		#bg.add(#grad.conic(@stops)[]);
-		#bg.size.set(@size);
+		#bg.size(@size);
 	}
 
 	.checkered45(@clr1; @size; @clr2: @t) {
 		@stops: @clr1 0 90deg, @clr2 90deg 180deg, @clr1 180deg 270deg, @clr2 270deg 360deg;
 		#bg.add(#grad.conic(@stops; 45deg)[]);
-		#bg.size.set(@size);
+		#bg.size(@size);
 	}
 }

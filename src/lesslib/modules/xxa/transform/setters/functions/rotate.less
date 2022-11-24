@@ -15,8 +15,9 @@
 		.z(@z: 1) {
 			#xf.set(rotateZ(@z));
 		}
-		._3d(@x: 0; @y: 0; @z: 0; @deg: 0) {
-			#xf.set(rotate3d(@arguments));
-		}
+	}
+
+	.rotate3d(@x: 0; @y: 0; @z: 0; @deg: 0) {
+		#xf.set(rotate3d(@arguments));
 	}
 }

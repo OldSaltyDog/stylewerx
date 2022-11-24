@@ -5,7 +5,7 @@
  * Code: WA Orr
  * Desc: Linear gradient function setter
  * * * * * * * * * * * * * * * * * * * */
-#grad {
+#gf {
 
 	/* * * * * * * * * * * * *
 	* @name: .linear
@@ -14,8 +14,8 @@
 	*	@angle: direction of gradient
 	*	@cs: colorstop list
 	* * * * * * * * * * * * */
-	.linear(@cs; @angle: 180deg) {
-		#bg.add(linear-gradient(@angle, @cs));
+	.l(@cs; @angle: 180deg) {
+		@gf: linear-gradient(@angle, @cs);
 	}
 
 	/* * * * * * * * * * * * *
@@ -25,7 +25,7 @@
 	*	@angle: direction of gradient
 	*	@cs: cs list
 	* * * * * * * * * * * * */
-	.linear-r(@cs; @angle: 180deg) {
-		#bg.add(repeating-linear-gradient(@angle, @cs));
+	.lr(@cs; @angle: 180deg) {
+		@gf: repeating-linear-gradient(@angle, @cs);
 	}
 }

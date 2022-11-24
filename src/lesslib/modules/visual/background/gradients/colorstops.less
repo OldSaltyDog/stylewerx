@@ -1,5 +1,12 @@
 #cs {
-	.split(@clr1; @clr2; @sp) {
-		@colorstop: @clr1 @split, @clr2 @split;
+	
+	.h1(@clr1; @size; @clr2: @t; @sp: 50%; @size: 100%) {
+		@cs: @clr1 0, @clr1 @sp, @clr2 @sp, @clr2 @size;  
 	}
+
+	.h2(@clr1; @clr2; @sp1: 25%, @sp2: 75%) {
+		@cs: @clr1 0, @clr1 @sp1, @cl2 @sp1, @clr2 @sp2, @clr1 @sp2, @cl1 1 @split;
+	}
+
+
 }
