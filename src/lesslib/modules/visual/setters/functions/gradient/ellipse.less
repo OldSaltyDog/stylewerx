@@ -1,26 +1,25 @@
-#grad {
-
+#gf {
 	.ellipse(@colorstop) {
-		#bg.add(radial-gradient(ellipse, @colorstop));
+		@gf: radial-gradient(ellipse, @colorstop);
 	}
 
 	.ellipse(@colorstop; @ext) {
-		#bg.add(radial-gradient(ellipse @ext, @colorstop));
+		@gf: radial-gradient(ellipse @ext, @colorstop);
 	}
 
 	.ellipse(@colorstop; @ext; @ctr) {
-		#bg.add(radial-gradient(ellipse @extent at @ctr, @colorstop));
+		@gf: radial-gradient(ellipse @extent at @ctr, @colorstop);
 	}
 
 	.ellipse-r(@colorstop) {
-		#bg.add(repeating-radial-gradient(ellipse, @colorstop));
+		@gf: repeating-radial-gradient(ellipse, @colorstop);
 	}
 
 	.ellipse-r(@colorstop; @ext) {
-		#bg.add(repeating-radial-gradient(ellipse @ext, @colorstop));
+		@gf: repeating-radial-gradient(ellipse @ext, @colorstop);
 	}
 
 	.ellipse-r(@colorstop; @ext; @ctr) {
-		#bg.add(repeating-radial-gradient(ellipse @extent at @ctr, @colorstop));
+		@gf: repeating-radial-gradient(ellipse @extent at @ctr, @colorstop);
 	}
 }

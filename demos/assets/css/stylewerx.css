@@ -1,0 +1,19 @@
+.lighten {
+  background: linear-gradient(180deg, #637b94, #456);
+}
+.darken {
+  background: linear-gradient(180deg, #456, #252f38);
+}
+.spin {
+  background: linear-gradient(180deg, #456, #444d66);
+}
+.sat {
+  background: linear-gradient(180deg, #456, #375573);
+}
+.concave {
+  background: linear-gradient(180deg, #456 0, #384654 50%, #405060 100%);
+}
+.convex {
+  background: linear-gradient(180deg, #456 0, #466482 50%, #405060 100%);
+}
+/*# sourceMappingURL=stylewerx.map */

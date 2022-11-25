@@ -1,12 +1,38 @@
 #cs {
 	
-	.h1(@clr1; @size; @clr2: @t; @sp: 50%; @size: 100%) {
+	.hp-1(@clr1; @clr2: @t; @sp: 50%; @size: 100%) {
 		@cs: @clr1 0, @clr1 @sp, @clr2 @sp, @clr2 @size;  
 	}
 
-	.h2(@clr1; @clr2; @sp1: 25%, @sp2: 75%) {
-		@cs: @clr1 0, @clr1 @sp1, @cl2 @sp1, @clr2 @sp2, @clr1 @sp2, @cl1 1 @split;
+	.hp-2(@clr1; @clr2: @t; @sp1: 25%; @sp2: 75%; @size: 100%) {
+		@cs: @clr1 0, @clr1 @sp1, @cl2 @sp1, @clr2 @sp2, @clr1 @sp2, @cl1 1 @size;
 	}
 
+	.sp-1(@clr1; @clr2) {
+		@cs: @clr1 0, @clr2 100%;
+	}
 
+	.sp-2(@clr1; @clr2; @clr3; @sp: 50%) {
+		@cs: @clr1 0, @clr2 @sp, @clr3 100%;
+	}
+
+	.lighten(@clr; @amt) {
+		@cs: @clr, lighten(@clr, @amt);
+	}
+
+	.darken(@clr; @amt) {
+		@cs: @clr, darken(@clr, @amt);
+	}
+
+	.spin(@clr; @amt: 10; @angle: 180deg) {
+		@lg: @clr, spin(@clr, @amt)[];
+	}
+
+	.sat(@clr; @amt: 10; @angle: 180deg) {
+		@lg: @clr, saturate(@clr, @amt)[];
+	}
+
+	.desat(@clr; @amt: 10; @angle: 180deg) {
+		@lg: @clr, desaturate(@clr, @amt)[];
+	}
 }

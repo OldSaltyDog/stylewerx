@@ -1,14 +1,25 @@
-#grad {
-
-	.conic(@colorstop) {
-		#bg.add(conic-gradient(@colorstop));
+#gf {
+	.conic(@cs) {
+		@gf: conic-gradient(@cs);
 	}
 
-	.conic(@colorstop; @start) {
-		#bg.add(conic-gradient(from @start, @colorstop));
+	.conic(@cs; @start) {
+		@gf: conic-gradient(from @start, @cs);
 	}
 
-	.conic-r(@colorstop; @start; @origin) {
-		#bg.add(conic-gradient(from @start at @origin, @cp));
+	.conic(@cs; @start; @origin) {
+		@gf: conic-gradient(from @start at @origin, @cp);
+	}
+
+	.conic-r(@cs) {
+		@gf: repeating-conic-gradient(@cs);
+	}
+
+	.conic-r(@cs; @start) {
+		@gf: repeating-conic-gradient(from @start, @cs);
+	}
+
+	.conic-r(@cs; @start; @origin) {
+		@gf: repeating-conic-gradient(from @start at @origin, @cp);
 	}
 }

@@ -1,21 +1,47 @@
 #bg {
-	.split(@clr1; @clr2; @split: 50%; @angle: 0deg) {
-		@cs: #cs.split(@clr1, @clr2, @split)[];
-		#grad.linear(@cs; @angle);
+	.split(@clr1; @clr2; @sp: 50%; @angle: 0deg) {
+		@cs: #cs.hp-1(@clr1, @clr2, @split)[];
+		#gf.linear(@cs: @split; @angle);
 	}
 	.split() {
-		.x(@clr1; @clr2; @split: 50%) {
-			@cs: #cs.split(@clr1, @clr2, @split)[];
-			#grad.linear(@cs; 90deg);
+		.x(@clr1; @clr2) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.right(@cs)[]);
 		}
-		.y(@clr1; @clr2; @split: 50%) {
-			#grad.linear(@cs; 180deg);
+
+		.x(@clr1; @clr2; @size; @pos) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.right(@cs)[]; @pos; @size);
 		}
-		.d45(@clr1; @clr2; @split: 50%) {
-			#grad.linear(@cs; 45deg);
+
+		.y(@clr1; @clr2) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.down(@cs)[]);
 		}
-		.d225(@clr1; @clr2; @split: 50%) {
-			#grad.linear(@cs; 225deg);
+
+		.y(@clr1; @clr2; @size; @pos) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.down(@cs)[]; @pos; @size);
+		}
+
+		.d45(@clr1; @clr2) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs; 45deg)[]);
+		}
+
+		.d45(@clr1; @clr2; @size; @pos) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs; 45deg)[]; @pos; @size);
+		}
+
+		.d225(@clr1; @clr2) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs; 225deg)[]);
+		}
+
+		.d225(@clr1; @clr2; @size; @pos) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs; 225deg)[]; @pos; @size);
 		}
 	}
 }
