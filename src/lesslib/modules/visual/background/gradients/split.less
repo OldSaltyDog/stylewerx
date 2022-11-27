@@ -1,7 +1,8 @@
-#bg {
+#bgl {
 	.split(@clr1; @clr2; @sp: 50%; @angle: 0deg) {
-		@cs: #cs.hp-1(@clr1, @clr2, @split)[];
-		#gf.linear(@cs: @split; @angle);
+		@cstop: #cs.hp-1(@clr1, @clr2, @sp)[];
+		@bg: #gf.linear(@cs: @cstop; @angle)[];
+		#bg.add(@bg);
 	}
 	.split() {
 		.x(@clr1; @clr2) {
