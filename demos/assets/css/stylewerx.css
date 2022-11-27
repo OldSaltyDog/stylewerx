@@ -16,4 +16,67 @@
 .convex {
   background: linear-gradient(180deg, #456 0, #466482 50%, #405060 100%);
 }
+/**
+ * red, green, 25%, 30deg
+ * 
+ **/
+.split {
+  background: linear-gradient(30deg, red 0, red 25%, green 25%, green 100%);
+}
+/**
+ * linear-gradient(90deg, red, green)
+ * 
+ **/
+.split-x {
+  background: linear-gradient(90deg, red 0, red 50%, green 50%, green 100%);
+}
+/**
+ * linear-gradient(90deg, red, green) 100% 100%/200% 200%;
+ * 
+ **/
+.split-x200 {
+  background: linear-gradient(90deg, red 0, red 50%, green 50%, green 100%) 100% 100%/200% 200%;
+}
+/**
+ * linear-gradient(90deg, red, green)
+ * 
+ **/
+.split-y {
+  background: linear-gradient(180deg, red 0, red 50%, green 50%, green 100%);
+}
+/**
+ * linear-gradient(90deg, red, green) 100% 100%/200% 200%;
+ * 
+ **/
+.split-y200 {
+  background: linear-gradient(180deg, red 0, red 50%, green 50%, green 100%) 100% 100%/200% 200%;
+}
+/**
+ * linear-gradient(90deg, red, green)
+ * 
+ **/
+.split-45 {
+  background: linear-gradient(45deg, red 0, red 50%, green 50%, green 100%);
+}
+/**
+ * linear-gradient(90deg, red, green) 100% 100%/200% 200%;
+ * 
+ **/
+.split-45-200 {
+  background: linear-gradient(45deg, red 0, red 50%, green 50%, green 100%) 100% 100%/200% 200%;
+}
+/**
+ * linear-gradient(90deg, red, green)
+ * 
+ **/
+.split-225 {
+  background: linear-gradient(225deg, red 0, red 50%, green 50%, green 100%);
+}
+/**
+ * linear-gradient(225deg, red, green) 100% 100%/200% 200%;
+ * 
+ **/
+.split-225-200 {
+  background: linear-gradient(225deg, red 0, red 50%, green 50%, green 100%) 100% 100%/200% 200%;
+}
 /*# sourceMappingURL=stylewerx.map */
