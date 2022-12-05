@@ -1,9 +1,13 @@
 ## StyleWerx ##
 
+| param | type | default | desc |
+| :---: | :--: | :-----: | :---- |
+| @clr | color | | sets color |
+| @inline | boolean | false | sets display type to inline-(dt)
 ## **namespace: #flex** ##
 
-.row(@il: false; @rev: false)
-.col(@il: false; @rev: false)
+.row(@inline: false; @rev: false)
+.col(@inline: false; @rev: false)
 ---
 ### **align-content**
 **call:** #ac.*mixin*()
