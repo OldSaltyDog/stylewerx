@@ -1,32 +1,32 @@
 #bgl {
 	.lighten(@clr; @amt: 10) {
 		@cs: lighten(@clr, @amt), @clr;
-		#bg.add(#gf.down(@cs)[]);
+		#bg.add(#gf.lg.down(@cs)[]);
 	}
 
 	.darken(@clr; @amt: 10) {
 		@cs: @clr, darken(@clr, @amt);
-		#bg.add(#gf.down(@cs)[]);
+		#bg.add(#gf.lg.down(@cs)[]);
 	}
 
 	.spin(@clr; @amt: 10) {
 		@cs: @clr, spin(@clr, @amt);
-		#bg.add(#gf.down(@cs)[]);
+		#bg.add(#gf.lg.down(@cs)[]);
 	}
 
 	.sat(@clr; @amt: 10) {
 		@cs: @clr, saturate(@clr, @amt);
-		#bg.add(#gf.down(@cs)[]);
+		#bg.add(#gf.lg.down(@cs)[]);
 	}
 
 	.concave(@clr) {
 		@cs: #cs.sp-2(@clr1: @clr; @clr2: darken(@clr, 6); @clr3: darken(@clr, 2))[];
-		#bg.add(#gf.down(@cs)[]);
+		#bg.add(#gf.lg.down(@cs)[]);
 	}
 
 	.convex(@clr) {
 		@cs: #cs.sp-2(@clr1: @clr; @clr2: saturate(lighten(@clr, 6), 10); @clr3: darken(@clr, 2))[];
-		#bg.add(#gf.down(@cs)[]);
+		#bg.add(#gf.lg.down(@cs)[]);
 	}
 	
 }

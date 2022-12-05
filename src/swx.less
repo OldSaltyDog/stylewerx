@@ -6,98 +6,27 @@
 @bg-p: 100% 100%;
 
 .lighten { 
-	#bgl.lighten(#456, 15);
+	#bgl.lighten(@c1, 15);
 }
 
 .darken { 
-	#bgl.darken(#456, 15);
+	#bgl.darken(@c1, 15);
 }
 
 .spin { 
-	#bgl.spin(#456, 15);
+	#bgl.spin(@c1, 15);
 }
 
 .sat { 
-	#bgl.sat(#456, 15);
+	#bgl.sat(@c1, 15);
 }
 
 .concave { 
-	#bgl.concave(#456);
+	#bgl.concave(@c1);
 }
 
 .convex { 
-	#bgl.convex(#456);
+	#bgl.convex(@c1);
 }
 
-/**
- * red, green, 25%, 30deg
- * 
- **/
-.split {
-	#bgl.split(@c1, @c2, 25%, 30deg);
-}
-
-/**
- * linear-gradient(90deg, red, green)
- * 
- **/
-.split-x {
-	#bgl.split.x(@c1; @c2);
-}
-
-/**
- * linear-gradient(90deg, red, green) 100% 100%/200% 200%;
- * 
- **/
-.split-x200 {
-	#bgl.split.x(@c1; @c2; @bg-s; @bg-p);
-}
-
-/**
- * linear-gradient(90deg, red, green)
- * 
- **/
-.split-y {
-	#bgl.split.y(@c1; @c2);
-}
-
-/**
- * linear-gradient(90deg, red, green) 100% 100%/200% 200%;
- * 
- **/
-.split-y200 {
-	#bgl.split.y(@c1; @c2; @bg-s; @bg-p);
-}
-
-/**
- * linear-gradient(90deg, red, green)
- * 
- **/
-.split-45 {
-	#bgl.split.d45(@c1; @c2);
-}
-
-/**
- * linear-gradient(90deg, red, green) 100% 100%/200% 200%;
- * 
- **/
-.split-45-200 {
-	#bg.split.d45(@c1; @c2; @bg-s; @bg-p);
-}
-
-/**
- * linear-gradient(90deg, red, green)
- * 
- **/
-.split-225 {
-	#bg.split.d225(@c1; @c2);
-}
-
-/**
- * linear-gradient(225deg, red, green) 100% 100%/200% 200%;
- * 
- **/
-.split-225-200 {
-	#bg.split.d225(@c1; @c2; @bg-s; @bg-p);
-}
 

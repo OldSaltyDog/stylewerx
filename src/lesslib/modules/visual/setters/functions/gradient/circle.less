@@ -11,15 +11,19 @@
 		@gf: radial-gradient(circle @ext at @origin, @stoplist);
 	}
 
-	.circle-r(@stoplist) {
-		@gf: repeating-radial-gradient(circle, @stoplist);
+	.circle() {
+		.rep(@stoplist) {
+			@gf: repeating-radial-gradient(circle, @stoplist);
+		}
+	
+		.rep(@stoplist; @ext) {
+			@gf: repeating-radial-gradient(circle @ext, @stoplist);
+		}
+	
+		.rep(@stoplist; @ext; @origin) {
+			@gf: repeating-radial-gradient(circle @ext at @origin, @stoplist);
+		} 
 	}
 
-	.circle-r(@stoplist; @ext) {
-		@gf: repeating-radial-gradient(circle @ext, @stoplist);
-	}
-
-	.circle-r(@stoplist; @ext; @origin) {
-		@gf: repeating-radial-gradient(circle @ext at @origin, @stoplist);
-	} 
+	
 }
