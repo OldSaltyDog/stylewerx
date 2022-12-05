@@ -4,16 +4,16 @@
 		display: none;
 	}
 
-	.block(@il: false) {
-		#disp.inline(block, @il);
+	.block(@inline: false) {
+		#disp.inline(block, @inline);
 	}
 
-	.grid(@il: false) {
-		#disp.inline(grid, @il);
+	.grid(@inline: false) {
+		#disp.inline(grid, @inline);
 	}
 
-	.flex(@il: false) {
-		#disp.inline(flex, @il);
+	.flex(@inline: false) {
+		#disp.inline(flex, @inline);
 	}
 
 	.flow-root() {
@@ -24,13 +24,13 @@
 		display: list-item;
 	}
 
-	.inline(@dt; @il: false) {
-		& when (@il) {
-			display: ~"inline-@{dt}";
+	.inline(@disptype; @inline: false) {
+		& when (@inline) {
+			display: ~"inline-@{disptype}";
 		} 
 
-		& when not(@il) {
-			display: @dt;
+		& when not(@inline) {
+			display: @disptype;
 		}
 	}
 }

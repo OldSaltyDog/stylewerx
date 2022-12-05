@@ -1,6 +1,6 @@
 #flex {
-	.row(@il: false; @rev: false) {
-		#disp.flex(@il);
+	.row(@inline: false; @rev: false) {
+		#disp.flex(@inline);
 		& when (@rev) {
 			flex-direction: row-reverse;
 		}
@@ -11,9 +11,14 @@
 	}
 
 	.row() {
-		.c(@w; @h) {
-			#disp.flex(@il);
+		.c(@inline: false) {
+			#disp.flex(@inline);
 			#flex.middle();
+		}
+		.c(@w; @h; @inline: false) {
+			#disp.flex(@inline);
+			#flex.middle();
+			.size(@w, @h);
 		}
 	}
 }

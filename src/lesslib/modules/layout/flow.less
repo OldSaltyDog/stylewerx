@@ -1,42 +1,46 @@
-.ab() {
-	#disp.block();
-	#pos.abs();
-}
+#dp {
+	.ab() {
+		#disp.block();
+		#pos.abs();
+	}
 
-.ab(@w; @h) {
-	#disp.block();
-	#pos.abs();
-	.size(@w, @h);
-}
+	.ab(@w; @h) {
+		#disp.block();
+		#pos.abs();
+		.size(@w, @h);
+	}
 
-.ailb() {
-	#disp.block(true);
-	#pos.abs();
-}
+	.ailb() {
+		#disp.block(true);
+		#pos.abs();
+	}
 
-.ailb(@w; @h) {
-	#disp.block(true);
-	#pos.abs();
-	.size(@w, @h);
-}
+	.ailb(@w; @h) {
+		#disp.block(true);
+		#pos.abs();
+		.size(@w, @h);
+	}
 
-.rb() {
-	#disp.block();
-	#pos.rel();
-}
+	.rb() {
+		#disp.block();
+		#pos.rel();
+	}
 
-.rel(@w; @h) {
-	position: relative
-}
+	.rb(@w; @h) {
+		#disp.block();
+		#pos.rel();
+		.size(@w, @h);
+	}
 
-.rb(@w; @h) {
-	#disp.block();
-	#pos.rel();
-	.size(@w, @h);
-}
+	.rilb() {
+		#disp.block(true);
+		#pos.rel();
+	}
 
-.rilb(@w; @h) {
-	#disp.block(true);
-	#pos.rel();
-	.size(@w, @h);
-}
+	.rilb(@w; @h) {
+		#disp.block(true);
+		#pos.rel();
+		.size(@w, @h);
+	}
+}	
+	
