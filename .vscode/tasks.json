@@ -4,7 +4,7 @@
 		{
 			"label": "Less Compile Main",
 			"type": "shell",
-			"command": "lessc --math=strict ./src/swx.less ./swx.css --source-map-include-source --source-map=./demos/assets/css/stylewerx.map",
+			"command": "lessc --math=strict ./src/swx.less ./dist/swx.css --source-map-include-source --source-map=./dist/stylewerx.map",
 			"group": "build"
 		}
 	]
