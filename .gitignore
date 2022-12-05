@@ -1,6 +1,4 @@
 node_modules/
 test/
 tests/
-docgen/
-demos/
 .vscode/

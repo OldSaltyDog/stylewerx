@@ -1,14 +1,18 @@
-.columngen(@cols; @gridname; @curr) when (@curr <= @cols) {
-	.@{class}-col-@{curr} {
-		width: round((100%/@cols) * @curr, 2);
+#flex {
+	.colgen(@gridname; @cols; @curr: 1) when (@curr <= @cols) {
+		.@{gridname}-col-@{curr} {
+			width: (round((100%/@cols) * @curr, 2));
+		}
+		#flex.colgen(@gridname, @cols, (@curr + 1));
 	}
-	.columngen(@cols; @class; @curr + 1);
+	
+	.gridgen(@name; @cols; @width; @gap: 0; @pad: 0) {
+		.@{name}-grid {
+			#flex.panel.y();
+			#flex.gap(@gap, @pad);
+			width: @width;
+		}
+		#flex.colgen(@name, @cols);
+	}
 }
 
-.gridgen(@name; @cols; @width; @gap: 0; @pad: 0) {
-	.@{name}-grid {
-		#flex.panel.y();
-		width: @width;
-		#flex.gap()
-	}
-}

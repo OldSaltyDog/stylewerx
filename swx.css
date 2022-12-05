@@ -1,0 +1,56 @@
+.g16-grid {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 20rem;
+}
+.g16-col-1 {
+  width: 6.25%;
+}
+.g16-col-2 {
+  width: 12.5%;
+}
+.g16-col-3 {
+  width: 18.75%;
+}
+.g16-col-4 {
+  width: 25%;
+}
+.g16-col-5 {
+  width: 31.25%;
+}
+.g16-col-6 {
+  width: 37.5%;
+}
+.g16-col-7 {
+  width: 43.75%;
+}
+.g16-col-8 {
+  width: 50%;
+}
+.g16-col-9 {
+  width: 56.25%;
+}
+.g16-col-10 {
+  width: 62.5%;
+}
+.g16-col-11 {
+  width: 68.75%;
+}
+.g16-col-12 {
+  width: 75%;
+}
+.g16-col-13 {
+  width: 81.25%;
+}
+.g16-col-14 {
+  width: 87.5%;
+}
+.g16-col-15 {
+  width: 93.75%;
+}
+.g16-col-16 {
+  width: 100%;
+}
+/*# sourceMappingURL=demos/assets/css/stylewerx.map */
