@@ -1,5 +1,5 @@
 #flex {
-	.middle(@gap: 0; @pad: false) {
+	.middle(@gap: 0; @pad: 0) {
 		#jc.c();
 		#ai.c();
 		#flex.gap(@gap, @pad);
@@ -10,14 +10,14 @@
 		#ac.str();
 	}
 
-	.spread(@gap: 0; @pad: false) {
+	.spread(@gap: 0; @pad: 0) {
 		#jc.sa();
 		#ai.c();
 		#ac.sa();
 		#flex.gap(@gap, @pad);
 	}
 
-	.split(@nth; @gap: 0; @pad: false) {
+	.split(@nth; @gap: 0; @pad: 0) {
 		&:nth-child(@{nth}) {
 			margin-left: auto;
 		}

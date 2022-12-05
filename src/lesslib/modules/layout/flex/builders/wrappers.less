@@ -1,12 +1,12 @@
 #flex() {
 	.wrap() {
-		.x(@gap: 0; @pad: false) {
+		.x(@gap: 0; @pad: 0) {
 			display: flex;
 			#flex.gap(@gap, @pad);
 			flex: none;
 		}
 
-		.y(@gap: 0; @pad: false) {
+		.y(@gap: 0; @pad: 0) {
 			#flex.col();
 			#flex.gap(@gap, @pad);
 			flex: none;

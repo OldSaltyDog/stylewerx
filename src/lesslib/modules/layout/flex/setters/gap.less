@@ -1,0 +1,11 @@
+#flex {
+	.gap(@gap; @pad) {
+		& when (@gap > 0) {
+			gap: @gap;
+		}
+
+		& when (@pad > 0) {
+			padding: @pad;
+		}
+	}
+}

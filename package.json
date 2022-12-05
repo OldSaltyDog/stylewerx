@@ -1,10 +1,11 @@
 {
   "name": "stylewerx",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "test/app.js",
   "scripts": {
-    "test": "./test/testing.js"
+    "test": "test/test.bgl.js"
   },
   "keywords": [],
   "author": "",

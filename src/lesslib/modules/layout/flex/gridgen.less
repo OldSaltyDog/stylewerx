@@ -1,0 +1,14 @@
+.columngen(@cols; @gridname; @curr) when (@curr <= @cols) {
+	.@{class}-col-@{curr} {
+		width: round((100%/@cols) * @curr, 2);
+	}
+	.columngen(@cols; @class; @curr + 1);
+}
+
+.gridgen(@name; @cols; @width; @gap: 0; @pad: 0) {
+	.@{name}-grid {
+		#flex.panel.y();
+		width: @width;
+		#flex.gap()
+	}
+}
