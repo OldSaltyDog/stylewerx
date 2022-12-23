@@ -7,22 +7,22 @@
 	.split() {
 		.x(@clr1; @clr2) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.right(@cs)[]);
+			#bg.add(#gf.lg.right(@cs)[]);
 		}
 
 		.x(@clr1; @clr2; @size; @pos) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.right(@cs)[]; @pos; @size);
+			#bg.add(#gf.lg.right(@cs)[]; @pos; @size);
 		}
 
 		.y(@clr1; @clr2) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.down(@cs)[]);
+			#bg.add(#gf.lg.down(@cs)[]);
 		}
 
 		.y(@clr1; @clr2; @size; @pos) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.down(@cs)[]; @pos; @size);
+			#bg.add(#gf.lg.down(@cs)[]; @pos; @size);
 		}
 
 		.d45(@clr1; @clr2) {

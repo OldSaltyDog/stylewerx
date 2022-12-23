@@ -11,9 +11,16 @@
 	}
 
 	.spread(@gap: 0; @pad: 0) {
-		#jc.sa();
+		#jc.c();
 		#ai.c();
 		#ac.sa();
+		#flex.gap(@gap, @pad);
+	}
+
+	.between(@gap: 0; @pad: 0) {
+		#jc.c();
+		#ai.c();
+		#ac.sb();
 		#flex.gap(@gap, @pad);
 	}
 
