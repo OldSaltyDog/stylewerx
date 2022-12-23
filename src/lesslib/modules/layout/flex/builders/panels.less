@@ -1,5 +1,21 @@
-#flex() {
-	.grid() {
-		
+#swx() {
+	.panel() {
+		.between(@pad: 0) {
+			#flex.row();
+			#flex.between();
+			padding: @pad;
+		}
+
+		.spread(@pad) {
+			#flex.row();
+			#flex.spread();
+		}
+
+		.stretch(@gap: 0; @pad: 0; @mar: 0) {
+			#flex.row();
+			#flex.stretch();
+			#flex.gap(@gap, @pad);
+			.mar(@mar);
+		}
 	}
 }
