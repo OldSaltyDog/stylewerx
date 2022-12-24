@@ -1,4 +1,5 @@
-.xi(@prop; @dur; @tf; @delay: 0ms) {
+.xi(@prop; @val; @dur; @tf; @delay: 0ms) {
+	@{prop}: @val;
 	transition+: @prop @dur @tf;
 
 	& when(@delay > 0) {
