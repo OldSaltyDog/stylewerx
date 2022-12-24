@@ -13,8 +13,17 @@
 	.bg-size(@size; @dur; @tf; @delay) {
 		.xi(background-size, @size; @dur; @tf; @delay);
 	}
+	
+	.bg-fc(@img; @dur; @tf; @delay-fc: 0; @delay-bg: 0) {
+		.xi(background, @img; @dur; @tf; @delay-bg);
+		.xi(color, @color; @dur; @tf; @delay-fc);
+	}
 
 	.fc(@color; @dur; @tf; @delay) {
 		.xi(color, @color; @dur; @tf; @delay);
+	}
+
+	.bs(@bs; @dur; @tf; @delay) {
+		.xi(box-shadow, @bs; @dur; @tf; @delay);
 	}
 }
