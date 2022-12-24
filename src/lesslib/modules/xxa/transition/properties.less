@@ -1,4 +1,7 @@
 #xi {
+	.all(@dur; @tf) {
+		transition: all @arguments;
+	}
 	.bg(@img; @dur; @tf; @delay) {
 		.xi(background, @img; @dur; @tf; @delay);
 	}
