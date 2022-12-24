@@ -1,28 +1,28 @@
 #xi {
 	.xlate(@x; @y) {
 		#xf.set(translate(@x, @y));
-		.xi(transform; @dur; @tf);
+		transition: transform @dur @tf;
 	}
 
 	.xlate() {
 		.x(@x; @dur; @tf) {
 			#xf.set(translateX(@x));
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 		
 		.y(@y; @dur; @tf) {
 			#xf.set(translateY(@y));
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 		
 		.z(@z; @dur; @tf) {
 			#xf.set(translateZ(@z));
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 		
 		._3d(@x; @y; @z; @dur; @tf) {
 			#xf.set(translate3d(@x, @y, @z));
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 	}
 }

@@ -3,30 +3,30 @@
 	
 	.scale(@v; @dur: 200ms; @tf: linear) {
 		#xf.scale(@v, @v);
-		.xi(transform; @dur; @tf);
+		transition: transform @dur @tf;
 	}
 
 	.scale(@x; @y; @dur: 200ms; @tf: linear) {
 		#xf.scale(@x, @y);
-		.xi(transform; @dur; @tf);
+		transition: transform @dur @tf;
 	}
 
 	.scale() {
 		.x(@v; @dur: 200ms; @tf: linear) {
 			#xf.scale.x(@v);
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 		.y(@v; @dur: 200ms; @tf: linear) {
 			#xf.scale.y(@v);
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 		.z(@v; @dur: 200ms; @tf: linear) {
 			#xf.scale.z(@v);
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 		._3d(@v; @dur: 200ms; @tf: linear) {
 			#xf.scale._3d(@x: 1; @y: 1; @z: 1);
-			.xi(transform; @dur; @tf);
+			transition: transform @dur @tf;
 		}
 		
 	}
