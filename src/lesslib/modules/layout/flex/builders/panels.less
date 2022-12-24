@@ -1,21 +1,33 @@
-#swx() {
+#flex() {
 	.panel() {
 		.between(@pad: 0) {
 			#flex.row();
+			flex-wrap: wrap;
 			#flex.between();
 			padding: @pad;
 		}
 
 		.spread(@pad) {
 			#flex.row();
+			flex-wrap: wrap;
 			#flex.spread();
 		}
 
 		.stretch(@gap: 0; @pad: 0; @mar: 0) {
 			#flex.row();
+			flex-wrap: wrap;
 			#flex.stretch();
 			#flex.gap(@gap, @pad);
 			.mar(@mar);
+		}
+		.y() {
+			.stretch(@gap: 0; @pad: 0; @mar: 0) {
+				#flex.row();
+				flex-wrap: wrap;
+				#flex.stretch();
+				#flex.gap(@gap, @pad);
+				.mar(@mar);
+			}
 		}
 	}
 }
