@@ -2,28 +2,28 @@
 	.all(@dur; @tf) {
 		transition: all @arguments;
 	}
-	.bg(@img; @dur; @tf; @delay) {
-		.xi(background, @img; @dur; @tf; @delay);
+	.bg(@img; @dur; @tf; @delay: 0) {
+		.xi(background, @img, @dur, @tf, @delay);
 	}
 
-	.bg-pos(@img; @dur; @tf; @delay) {
-		.xi(background-position, @img; @dur; @tf; @delay);
+	.bg-pos(@pos; @dur; @tf; @delay: 0) {
+		.xi(background-position, @pos, @dur, @tf, @delay);
 	}
 
-	.bg-size(@size; @dur; @tf; @delay) {
-		.xi(background-size, @size; @dur; @tf; @delay);
+	.bg-size(@size; @dur; @tf; @delay: 0) {
+		.xi(background-size, @size, @dur, @tf, @delay);
 	}
 	
 	.bg-fc(@img; @dur; @tf; @delay-fc: 0; @delay-bg: 0) {
-		.xi(background, @img; @dur; @tf; @delay-bg);
-		.xi(color, @color; @dur; @tf; @delay-fc);
+		.xi(background, @img, @dur, @tf, @delay-bg);
+		.xi(color, @color, @dur, @tf, @delay-fc);
 	}
 
-	.fc(@color; @dur; @tf; @delay) {
-		.xi(color, @color; @dur; @tf; @delay);
+	.fc(@color; @dur; @tf; @delay: 0) {
+		.xi(color, @color, @dur, @tf, @delay);
 	}
 
-	.bs(@bs; @dur; @tf; @delay) {
-		.xi(box-shadow, @bs; @dur; @tf; @delay);
+	.bs(@bs; @dur; @tf; @delay: 0) {
+		.xi(box-shadow, @bs, @dur, @tf, @delay);
 	}
 }
