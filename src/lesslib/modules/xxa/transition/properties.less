@@ -2,6 +2,11 @@
 	.all(@dur; @tf) {
 		transition: all @arguments;
 	}
+
+	.bg-color(@clr; @dur; @tf; @delay: 0) {
+		.xi(background-color, @clr, @dur, @tf, @delay);
+	}
+
 	.bg(@img; @dur; @tf; @delay: 0) {
 		.xi(background, @img, @dur, @tf, @delay);
 	}

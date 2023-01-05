@@ -17,8 +17,8 @@
 	*  desc: applies a light and dark shadow to make the element appear raised up
 	--MIXIN */
 	.raise() {
-		.bs(0 2px 1px 1px @fb-25);
-		.bsi(1px 1px 1px 0 @fw-15);
+		.bs(0 1px 1px 1px @fb-25);
+		.bsi(0 1px 1px 0 @fw-20);
 	}
 
 	/* MIXIN
@@ -28,9 +28,9 @@
 	*  		   @ob: outer blur (0)
 	*  desc: applies a light and dark shadow to make the element lower that the panel raised up
 	--MIXIN */
-	.lower(@w; @ib: 1px; @ob: 0) {
-		.bs(0 @w @w 1px @fb-20 inset);
-		.bs(0 @w @w 0 @fw-20);
+	.lower() {
+		.bs(0 1px 1px 1px @fb-30 inset);
+		.bs(0 1px 1px 0 @fw-20);
 	}
 
 	/* MIXIN
