@@ -4,7 +4,7 @@
 	fieldset, output, input, select, textarea, button, reset, submit, 
 	label, time, blockquote, pre, cite, code, h1, h2, h3, h4, h5, h6, 
 	hgroup, table, caption, tbody, tfoot, thead, tr, th, td, a, b, u, 
-	i, p, q, s, abbr, dl, dt, dd, ul, ol, li  {
+	i, p, q, s, abbr, dl, dt, dd, ul, ol, li, meter, progress  {
 		@reset();
 	}
 
@@ -55,5 +55,5 @@
 	font-size: inherit;
 	vertical-align: baseline;
 	text-decoration: none;
-	background: @t;
+	#bg.add(@t);
 }
