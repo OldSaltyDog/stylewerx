@@ -6,6 +6,18 @@
 			"type": "shell",
 			"command": "lessc --math=strict ./src/swx.less ./dist/swx.css --source-map-include-source --source-map=./dist/stylewerx.map",
 			"group": "build"
+		},
+		{
+			"label": "Less Compile: lg basic",
+			"type": "shell",
+			"command": "lessc --math=strict ./tests/bg/lg.basic.less ./tests/bg/lg.basic.css",
+			"group": "build"
+		},
+		{
+			"label": "Less Compile: lg split",
+			"type": "shell",
+			"command": "lessc --math=strict ./tests/bg/lg.split.less ./tests/bg/lg.split.css",
+			"group": "build"
 		}
 	]
 }

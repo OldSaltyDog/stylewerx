@@ -1,28 +1,28 @@
 #bg {
 	.lg() {
-		.lighten(@clr; @amt: 10; @angle) {
+		.lighten(@clr; @amt: 10; @angle: @from[t]) {
 			@cs: lighten(@clr, @amt), @clr;
-			#bg.add(#gd.linear(@cs; @angle));
+			background+: #gf.linear(@cs; @angle)[];
 		}
 
-		.darken(@clr; @amt: 10; @angle) {
+		.darken(@clr; @amt: 10; @angle: @from[t]) {
 			@cs: @clr, darken(@clr, @amt);
-			#bg.add(#gd.linear(@cs; @angle));
+			background+: #gf.linear(@cs; @angle)[];
 		}
 
-		.concave(@clr; @amt: 10; @angle) {
-			@cs: @clr, darken(@clr, @amt), @clr;
-			#bg.add(#gd.linear(@cs; @angle));
+		.concave(@clr; @amt: 10; @angle: @from[t]) {
+			@cs: #cs.concave(@clr, @amt)[];
+			background+: #gf.linear(@cs; @angle)[];
 		}
 
-		.convex(@clr; @amt: 10; @angle) {
-			@cs: darken(@clr, @amt), @clr; darken(@clr, @amt);
-			#bg.add(#gd.linear(@cs; @angle));
+		.convex(@clr; @amt: 10; @angle: @from[t]) {
+			@cs: #cs.convex(@clr, @amt)[];
+			background+: #gf.linear(@cs; @angle)[];
 		}
 
-		.glossy(@clr) {
+		.glossy(@clr; @angle: @from[t]) {
 			@cs: #cs.gloss(@clr)[];
-			#bg.add(#gd.linear(@cs; @angle));
+			background+: #gf.linear(@cs; @angle)[];
 		}
 	}
 }
