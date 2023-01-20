@@ -1,4 +1,4 @@
-#bgl {
+#bg {
 	.split(@clr1; @clr2; @sp: 50%; @angle: 0deg) {
 		@cstop: #cs.hp-1(@clr1, @clr2, @sp)[];
 		@bg: #gf.linear(@cs: @cstop; @angle)[];
@@ -7,42 +7,62 @@
 	.split() {
 		.x(@clr1; @clr2) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.lg.right(@cs)[]);
+			#bg.add(#gf.linear(@cs; @from[t])[]);
 		}
 
 		.x(@clr1; @clr2; @size; @pos) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.lg.right(@cs)[]; @pos; @size);
+			#bg.add(#gf.linear(@cs; @from[t])[]; @pos; @size);
 		}
 
 		.y(@clr1; @clr2) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.lg.down(@cs)[]);
+			#bg.add(#gf.linear(@cs; @from[l])[]);
 		}
 
 		.y(@clr1; @clr2; @size; @pos) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.lg.down(@cs)[]; @pos; @size);
+			#bg.add(#gf.linear(@cs; @from[l])[]; @pos; @size);
 		}
 
-		.d45(@clr1; @clr2) {
+		.d-bl(@clr1; @clr2) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.linear(@cs; 45deg)[]);
+			#bg.add(#gf.linear(@cs; @from[bl])[]);
 		}
 
-		.d45(@clr1; @clr2; @size; @pos) {
+		.d-bl(@clr1; @clr2; @size; @pos) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.linear(@cs; 45deg)[]; @pos; @size);
+			#bg.add(#gf.linear(@cs; @from[bl])[]; @pos; @size);
 		}
 
-		.d225(@clr1; @clr2) {
+		.d-tl(@clr1; @clr2) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.linear(@cs; 225deg)[]);
+			#bg.add(#gf.linear(@cs; @from[tl])[]);
 		}
 
-		.d225(@clr1; @clr2; @size; @pos) {
+		.d-tl(@clr1; @clr2; @size; @pos) {
 			@cs: #cs.hp-1(@clr1, @clr2)[];
-			#bg.add(#gf.linear(@cs; 225deg)[]; @pos; @size);
+			#bg.add(#gf.linear(@cs; @from[tl])[]; @pos; @size);
+		}
+
+		.d-tr(@clr1; @clr2) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs; @from[tr])[]);
+		}
+
+		.d-tr(@clr1; @clr2; @size; @pos) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs;  @from[tr])[]; @pos; @size);
+		}
+
+		.d-br(@clr1; @clr2) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs; @from[br])[]);
+		}
+
+		.d-br(@clr1; @clr2; @size; @pos) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs;  @from[br])[]; @pos; @size);
 		}
 	}
 }

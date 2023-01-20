@@ -1,0 +1,28 @@
+#bg {
+	.lg() {
+		.lighten(@clr; @amt: 10; @angle) {
+			@cs: lighten(@clr, @amt), @clr;
+			#bg.add(#gd.linear(@cs; @angle));
+		}
+
+		.darken(@clr; @amt: 10; @angle) {
+			@cs: @clr, darken(@clr, @amt);
+			#bg.add(#gd.linear(@cs; @angle));
+		}
+
+		.concave(@clr; @amt: 10; @angle) {
+			@cs: @clr, darken(@clr, @amt), @clr;
+			#bg.add(#gd.linear(@cs; @angle));
+		}
+
+		.convex(@clr; @amt: 10; @angle) {
+			@cs: darken(@clr, @amt), @clr; darken(@clr, @amt);
+			#bg.add(#gd.linear(@cs; @angle));
+		}
+
+		.glossy(@clr) {
+			@cs: #cs.gloss(@clr)[];
+			#bg.add(#gd.linear(@cs; @angle));
+		}
+	}
+}
