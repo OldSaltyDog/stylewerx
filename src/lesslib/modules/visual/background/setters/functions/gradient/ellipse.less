@@ -1,0 +1,27 @@
+#gf {
+	.ellipse(@colorstop) {
+		@gf: radial-gradient(ellipse, @colorstop);
+	}
+
+	.ellipse(@colorstop; @ext) {
+		@gf: radial-gradient(ellipse @ext, @colorstop);
+	}
+
+	.ellipse(@colorstop; @ext; @ctr) {
+		@gf: radial-gradient(ellipse @extent at @ctr, @colorstop);
+	}
+
+	.ellipse() {
+		.repeat(@colorstop) {
+			@gf: repeating-radial-gradient(ellipse, @colorstop);
+		}
+	
+		.repeat(@colorstop; @ext) {
+			@gf: repeating-radial-gradient(ellipse @ext, @colorstop);
+		}
+	
+		.repeat(@colorstop; @ext; @ctr) {
+			@gf: repeating-radial-gradient(ellipse @extent at @ctr, @colorstop);
+		}
+	}
+}

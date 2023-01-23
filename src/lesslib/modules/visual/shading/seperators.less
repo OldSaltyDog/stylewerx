@@ -18,7 +18,7 @@
 			}
 		}
 		.r(@clr; @blur: 0) {
-			&:not( :first-child) {
+			&:not( :last-child) {
 				.bsi(1px 0 0 @blur @clr);
 			}
 		}
@@ -28,7 +28,7 @@
 			}
 		}
 		.b(@clr; @blur: 0) {
-			&:not( :first-child) {
+			&:not( :last-child) {
 				.bsi(0 -1px @blur 0 @clr);
 			}
 		}
@@ -36,7 +36,7 @@
 			&:not( :first-child) {
 				.bsi(1px 0 0 @blur @clr-t);
 			}
-			&:not(:last-of-type) {
+			&:not( :last-child) {
 				.bsi(-1px 0 0 @blur @clr-b);
 			}
 		}
@@ -44,7 +44,7 @@
 			&:not( :first-child) {
 				.bsi(0 1px @blur 0 @clr-t);
 			}
-			&:not(:last-of-type) {
+			&:not( :last-child) {
 				.bsi(0 -1px @blur 0 @clr-b);
 			}
 		}
