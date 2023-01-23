@@ -1,21 +1,17 @@
-.bs(@list; @inset: false) {
-	box-shadow+: @list;
-
-	& when (@inset) {
-		box-shadow+_: inset;
-	}
-}
-
-.bsi(@list) {
-	box-shadow+: @list inset;
-}
-
 #bs {
-	.x(@x; @clr; @blur: 0; @spr: 0) {
+	.set(@list; @inset: false) when (@inset) {
+		.bsi(@list);
+	}
+
+	.set(@list; @inset: false) when (default()) {
+		.bs(@list);
+	}
+	
+	.x(@x; @clr: @fb-25; @blur: 0; @spr: 0; @clr: @fb-25) {
 		.bs(@x 0 @blur @spr @clr);
 	}
 
-	.y(@y; @clr; @blur: 0; @spr: 0) {
+	.y(@y; @clr: @fb-25; @blur: 0; @spr: 0; @clr: @fb-25) {
 		.bs(@arguments);
 	}
 
@@ -23,16 +19,20 @@
 		.bs(0 0 @blur @spread @clr);
 	}
 
-	.edge-in(@blur: 1px; @spread: 1px; @clr: @fb-25) {
-		.bsi(0 0 @blur @spread @clr);
+	.edge() {
+		.in(@blur: 1px; @spread: 1px; @clr: @fb-25) {
+			.bsi(0 0 @blur @spread @clr);
+		}
 	}
 
 	.spread(@w; @clr) {
 		.bs(0 0 0 @w @clr);
 	}
 
-	.spr-in(@w; @clr) {
-		.bsi(0 0 0 @w @clr);
+	.spread() {
+		.in(@w; @clr) {
+			.bsi(0 0 0 @w @clr);
+		}
 	}
 }
 

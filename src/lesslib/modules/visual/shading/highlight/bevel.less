@@ -1,0 +1,6 @@
+#hl {
+	.bevel(@clr1; @clr2; @w: 2px; @blur: 0) {
+		.bsi(@w @w @blur 0 @clr1);
+		.bsi(-@w -@w @blur 0 @clr2);
+	}
+}

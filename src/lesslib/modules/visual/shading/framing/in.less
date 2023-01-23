@@ -1,0 +1,27 @@
+#frame {
+	.in() {
+		.all(@size; @clr) {
+			.bsi(0 0 0 @siz@size @clr);
+		}
+		.x(@size; @clr) {
+			.bsi(@size 0 0 @size @clr);
+			.bsi(-@size 0 0 @size @clr);
+		}
+		.y(@size; @clr) {
+			.bsi(0 @size 0 @size @clr);
+			.bsi(0 -@size 0 @size @clr);
+		}
+		.t(@size; @clr) {
+			.bsi(0 @size 0 @size @clr);
+		}
+		.r(@size; @clr) {
+			.bsi(-@size 0 0 @size @clr);
+		}
+		.b(@size; @clr) {
+			.bsi(0 -@size 0 @size @clr);
+		}
+		.l(@size; @clr) {
+			.bsi(@size 0 0 @size @clr);
+		}		
+	}
+}

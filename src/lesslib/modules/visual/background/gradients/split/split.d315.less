@@ -1,0 +1,13 @@
+#bg {
+	.split() {
+		.d315(@clr1; @clr2) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs; @from[br])[]);
+		}
+
+		.d315(@clr1; @clr2; @size; @pos) {
+			@cs: #cs.hp-1(@clr1, @clr2)[];
+			#bg.add(#gf.linear(@cs;  @from[br])[]; @pos; @size);
+		}
+	}
+}
