@@ -9,20 +9,25 @@
 		#jc.str();
 		#ai.str();
 		#ac.str();
+		#flex.gap(@gap, @pad);
 	}
 
-	.spread(@gap: 0; @pad: 0) {
+	.apart(@gap: 0; @pad: 0) {
 		#jc.c();
 		#ai.c();
 		#ac.sa();
-		#flex.gap(@gap, @pad);
+		#flex.gap(@pad);
 	}
 
-	.between(@gap: 0; @pad: 0) {
+	.between(@pad: 0) {
 		#jc.c();
 		#ai.c();
 		#ac.sb();
-		#flex.gap(@gap, @pad);
+		padding: @pad;
+	}
+
+	.even(@pad: 0) {
+		#jc.se();
 	}
 
 	.split(@nth; @gap: 0; @pad: 0) {
