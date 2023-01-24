@@ -1,0 +1,47 @@
+#swx {
+	.span() {
+		.x(@gap: 0; @pad: 0) {
+			#flex.row();
+			#flex.gap(@gap, @pad);
+			flex: 1;
+		}
+
+		.x() {
+			.stretch(@gap: 0; @pad: 0) {
+				#flex.row();
+				#jc.str();
+				#flex.gap(@gap, @pad);
+				flex: auto;
+			}
+
+			.even(@pad: 0) {
+				#flex.row();
+				#jc.se();
+				padding: @pad;
+				flex: auto;
+			}
+
+			.around(@pad: 0) {
+				#flex.row();
+				#jc.sa();
+				padding: @pad;
+				flex: auto;
+			}
+
+			.between(@pad: 0) {
+				#flex.row();
+				#jc.sb();
+				padding: @pad;
+				flex: auto;
+			}
+			
+			.split(@nth; @gap: 0; @pad: 0) {
+				&:nth-child(@{nth}) {
+					margin-left: auto;
+				}
+				#flex.gap(@gap, @pad);
+				flex: auto;
+			}
+		}
+	}
+}

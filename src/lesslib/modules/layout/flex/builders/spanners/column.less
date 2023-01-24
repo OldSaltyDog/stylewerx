@@ -1,0 +1,45 @@
+#swx {
+	.y(@gap: 0; @pad: 0) {
+		#flex.col();
+		#flex.gap(@gap, @pad);
+		flex: 1;
+	}
+
+	.y() {
+		.stretch(@gap: 0; @pad: 0) {
+			#flex.col();
+			#jc.str();
+			#flex.gap(@gap, @pad);
+			flex: auto;
+		}
+
+		.even(@pad: 0) {
+			#flex.col();
+			#jc.se();
+			padding: @pad;
+			flex: auto;
+		}
+
+		.around(@pad: 0) {
+			#flex.col();
+			#jc.sa();
+			padding: @pad;
+			flex: auto;
+		}
+
+		.between(@pad: 0) {
+			#flex.col();
+			#jc.sb();
+			padding: @pad;
+			flex: auto;
+		}
+		
+		.split(@nth; @gap: 0; @pad: 0) {
+			&:nth-child(@{nth}) {
+				margin-left: auto;
+			}
+			#flex.gap(@gap, @pad);
+			flex: auto;
+		}
+	}
+}
