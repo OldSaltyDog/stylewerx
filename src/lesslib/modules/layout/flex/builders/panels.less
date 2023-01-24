@@ -3,17 +3,23 @@
 		.between(@pad: 0) {
 			#flex.panel.x();
 			#flex.between();
-			padding: @pad;
+			& when (@pad > 0) {
+				padding: @pad;
+			}
 		}
 
 		.spread(@pad: 0) {
 			#flex.panel.x();
 			#flex.spread();
+			& when (@pad > 0) {
+				padding: @pad;
+			}
 		}
 
 		.center(@gap: 0; @pad: 0) {
 			#flex.panel.x();
 			#flex.middle();
+			#flex.gap(@gap, @pad);
 		}
 
 		.stretch(@gap: 0; @pad: 0) {
@@ -21,6 +27,7 @@
 			#flex.stretch();
 			#flex.gap(@gap, @pad);
 		}
+		
 		.y() {
 			.stretch(@gap: 0; @pad: 0) {
 				#flex.panel.x();
