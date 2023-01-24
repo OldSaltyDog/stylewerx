@@ -1,5 +1,4 @@
 #disp {
-
 	.none() {
 		display: none;
 	}
@@ -7,21 +6,13 @@
 	.block(@inline: false) {
 		#disp.inline(block, @inline);
 	}
-
-	.grid(@inline: false) {
-		#disp.inline(grid, @inline);
-	}
-
+	
 	.flex(@inline: false) {
 		#disp.inline(flex, @inline);
 	}
 
-	.flow-root() {
-		display: flow-root;
-	}
-
-	.listitem() {
-		display: list-item;
+	.inline() {
+		display: inline;
 	}
 
 	.inline(@disptype; @inline: false) {

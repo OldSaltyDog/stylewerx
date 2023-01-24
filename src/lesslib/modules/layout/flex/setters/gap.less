@@ -1,9 +1,8 @@
 #flex {
-	.gap(@gap; @pad) {
+	.gap(@gap: 0; @pad: 0) {
 		& when (@gap > 0) {
 			gap: @gap;
 		}
-
 		& when (@pad > 0) {
 			padding: @pad;
 		}
