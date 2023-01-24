@@ -1,25 +1,13 @@
 #flex {
 	.panel() {
 		.x(@inline: false; @rev: false) {
-			#disp.flex(@inline);
-			& when (@rev) {
-				flex-flow: row-reverse wrap;
-			}
-			
-			& when not (@rev) {
-				flex-flow: row wrap;
-			}
+			#flex.row(@inline, @rev);
+			flex-wrap: wrap;
 		}
 		
 		.y(@inline: false; @rev: false) {
-			#disp.flex(@inline);
-			& when (@rev) {
-				flex-flow: column-reverse wrap;
-			}
-			
-			& when not (@rev) {
-				flex-flow: column wrap;
-			}
+			#flex.col(@inline, @rev);
+			flex-wrap: wrap;
 		}
 	}
 }

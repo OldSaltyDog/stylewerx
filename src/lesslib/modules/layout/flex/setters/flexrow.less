@@ -9,16 +9,4 @@
 			flex-direction: row;
 		}
 	}
-
-	.row() {
-		.c(@inline: false) {
-			#disp.flex(@inline);
-			#flex.middle();
-		}
-		.c(@w; @h; @inline: false) {
-			#disp.flex(@inline);
-			#flex.middle();
-			.size(@w, @h);
-		}
-	}
 }

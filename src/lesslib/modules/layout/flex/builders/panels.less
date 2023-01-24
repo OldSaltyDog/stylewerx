@@ -1,38 +1,31 @@
-#flex() {
+#swx() {
 	.panel() {
 		.between(@pad: 0) {
-			#flex.row();
-			flex-wrap: wrap;
+			#flex.panel.x();
 			#flex.between();
 			padding: @pad;
 		}
 
-		.spread(@pad) {
-			#flex.row();
-			flex-wrap: wrap;
+		.spread(@pad: 0) {
+			#flex.panel.x();
 			#flex.spread();
 		}
 
 		.center(@gap: 0; @pad: 0) {
-			#flex.row();
-			flex-wrap: wrap;
+			#flex.panel.x();
 			#flex.middle();
 		}
 
-		.stretch(@gap: 0; @pad: 0; @mar: 0) {
-			#flex.row();
-			flex-wrap: wrap;
+		.stretch(@gap: 0; @pad: 0) {
+			#flex.panel.x();
 			#flex.stretch();
 			#flex.gap(@gap, @pad);
-			.mar(@mar);
 		}
 		.y() {
-			.stretch(@gap: 0; @pad: 0; @mar: 0) {
-				#flex.row();
-				flex-wrap: wrap;
+			.stretch(@gap: 0; @pad: 0) {
+				#flex.panel.x();
 				#flex.stretch();
 				#flex.gap(@gap, @pad);
-				.mar(@mar);
 			}
 		}
 	}
