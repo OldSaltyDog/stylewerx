@@ -26,15 +26,13 @@
 		}
 
 		.split(@clr1; @clr2; @angle: @from[t]; @sp: 50%) {
-			@cs: #cs.hp-1(@clr1, @clr2, @sp)[];
-			background+: #gf.linear(@cs; @angle);
+			@cs: #cs.split(@clr1, @clr2, @sp)[];
+			background+: #gf.linear(@cs; @angle)[];
 		}
 
-		.stripe(@clr1; @clr2: @t; @width: 50%; @center: 50%) {
-			@sp: (@center - (@width/2));
-			@ep: (@center + (@width/2));
-			@cs: #cs.stripe(@clr1, @clr2, @sp, @ep)[];
-			background+: #gf.linear(@cs; @from[t])[];
+		.striped(@clr1; @angle; @clr2: @t; @width: 50%; @cp: 50%) {
+			@cs: #cs.stripe(@clr1, @clr2, @width, @cp)[];
+			background+: #gf.linear(@cs; @angle)[];
 		}
 	}
 }
