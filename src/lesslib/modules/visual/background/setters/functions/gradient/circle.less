@@ -1,29 +1,27 @@
 #gf {
-	.circle(@stoplist) {
-		@gf: radial-gradient(circle, @stoplist);
+	.circle(@cs) {
+		@img: radial-gradient(circle, @cs);
 	}
 
-	.circle(@stoplist; @ext) {
-		@gf: radial-gradient(circle @ext, @stoplist);
+	.circle(@cs; @ext) {
+		@img: radial-gradient(circle @ext, @cs);
 	}
 
-	.circle(@stoplist; @ext; @origin) {
-		@gf: radial-gradient(circle @ext at @origin, @stoplist);
+	.circle(@cs; @ext; @origin) {
+		@img: radial-gradient(circle @ext at @origin, @cs);
 	}
 
 	.circle() {
-		.rep(@stoplist) {
-			@gf: repeating-radial-gradient(circle, @stoplist);
+		.repeat(@cs) {
+			@img: repeating-radial-gradient(circle, @cs);
 		}
 	
-		.rep(@stoplist; @ext) {
-			@gf: repeating-radial-gradient(circle @ext, @stoplist);
+		.repeat(@cs; @ext) {
+			@img: repeating-radial-gradient(circle @ext, @cs);
 		}
 	
-		.rep(@stoplist; @ext; @origin) {
-			@gf: repeating-radial-gradient(circle @ext at @origin, @stoplist);
+		.repeat(@cs; @ext; @origin) {
+			@img: repeating-radial-gradient(circle @ext at @origin, @cs);
 		} 
 	}
-
-	
 }

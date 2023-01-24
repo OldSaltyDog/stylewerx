@@ -3,9 +3,11 @@
 	.size(@size) {
 		background-size+: @size @size;
 	}
+
 	.size(@w; @h) {
 		background-size+: @w @h;
 	}
+	
 	.quarter() {
 		background-size+: 25% 25%;
 	}
@@ -16,6 +18,18 @@
 
 	.full() {
 		background-size+: 100% 100%;
+	}
+
+	.x2() {
+		background-size+: 200% 100%;
+	}
+
+	.y2() {
+		background-size+: 100% 200%;
+	}
+
+	.xy2() {
+		background-size+: 200% 200%;
 	}
 
 	.contain() {

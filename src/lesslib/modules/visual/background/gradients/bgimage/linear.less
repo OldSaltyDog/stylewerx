@@ -1,4 +1,4 @@
-#swg {
+#bg {
 	.lg() {
 		.lighten(@clr; @amt: 10; @angle: @from[t]) {
 			@cs: lighten(@clr, @amt), @clr;
@@ -23,6 +23,18 @@
 		.glossy(@clr; @angle: @from[t]) {
 			@cs: #cs.gloss(@clr)[];
 			background+: #gf.linear(@cs; @angle)[];
+		}
+
+		.split(@clr1; @clr2; @angle: @from[t]; @sp: 50%) {
+			@cs: #cs.hp-1(@clr1, @clr2, @sp)[];
+			background+: #gf.linear(@cs; @angle);
+		}
+
+		.stripe(@clr1; @clr2: @t; @width: 50%; @center: 50%) {
+			@sp: (@center - (@width/2));
+			@ep: (@center + (@width/2));
+			@cs: #cs.stripe(@clr1, @clr2, @sp, @ep)[];
+			background+: #gf.linear(@cs; @from[t])[];
 		}
 	}
 }
