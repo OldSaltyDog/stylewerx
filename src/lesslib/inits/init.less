@@ -1,10 +1,10 @@
 .reset(@base: 100%) {
-	html, body, header, footer, article, section, summary, details, 
-	aside, nav, address, figure, figcaption, div, span, form, legend, 
-	fieldset, output, input, select, textarea, button, reset, submit, 
-	label, time, blockquote, pre, cite, code, h1, h2, h3, h4, h5, h6, 
-	hgroup, table, caption, tbody, tfoot, thead, tr, th, td, a, b, u, 
-	i, p, q, s, abbr, dl, dt, dd, ul, ol, li, meter, progress  {
+	a:is(:link, :visited, :local-link, :active), b, u, i, p, q, s, abbr, address, 
+	article, aside, blockquote, body, button, caption, cite, code, dl, dt, dd, details, 
+	dialog, div, fieldset, footer, figure, figcaption, form, h1, h2, h3, h4, h5, h6, 
+	header, hgroup, html, input, label, legend, meter, nav, output, pre, progress, reset, 
+	submit, select, section, span, summary, textarea, table, tbody, tfoot, thead, tr, th, 
+	td, time, ul, ol, li  {
 		@reset();
 	}
 
@@ -20,15 +20,6 @@
 
 	[type=number] {
 		-moz-appearance: textfield;
-	}
-
-	a {
-		&:not([class]),
-		&:hover,
-		&:visited,
-		&:active {
-			text-decoration: none;
-		}
 	}
 
 	[type="checkbox"],
