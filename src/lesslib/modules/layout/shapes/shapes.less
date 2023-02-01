@@ -3,6 +3,26 @@
 		.size(@size);
 		.br-50();
 	}
+
+	.circle() {
+		.half() {
+			.up(@val) {
+				border-radius: 50% 50% 0 0;
+			}
+
+			.right(@val) {
+				border-radius: 0 50% 50% 0;
+			}
+
+			.down(@val) {
+				border-radius: 0 0 50% 50%;
+			}
+
+			.left(@val) {
+				border-radius: 50% 0 0 50%;
+			}
+		}
+	}
 	
 	.halfround(@size) {
 		.size(@size);

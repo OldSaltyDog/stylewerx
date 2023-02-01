@@ -3,7 +3,7 @@
 		border-radius: (@h * @mod);
 	}
 
-	.inner(@or; @dist) when ((@or - @dist) > 0) {
+	.inner(@outer; @len) when ((@outer - @dist) > 0) {
 		border-radius: (@or - @dist); 
 	}
 

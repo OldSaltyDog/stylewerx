@@ -15,30 +15,23 @@
 		
 	}
 
-	.right() {
-		text-align: right;
-	}
-
-	.justify() {
-		text-align: justify;
-	}
-
 	.top() {
 		vertical-align: top;
+	}
+
+	.right() {
+		text-align: right;
 	}
 
 	.bottom() {
 		vertical-align: bottom;
 	}
 
-	.indent(@val; @pad: false) {
-		text-indent: @val;
-		& when (@pad) {
-			padding-right: @val;
-		}
+	.left() {
+		text-align: left;
 	}
 
-	.nowrap() {
-		white-space: nowrap;
+	.justify() {
+		text-align: justify;
 	}
 }

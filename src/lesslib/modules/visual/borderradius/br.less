@@ -1,18 +1,18 @@
-.br(@val) {
-	border-radius: @val;
-}
-
-.br-50() {
-	border-radius: 50%;
-}
-
-.br-25() {
-	border-radius: 25%;
-}
-
 #br {
+	.set(@val) {
+		border-radius: @val;
+	}
+
 	.none() {
 		border-radius: 0;
+	}
+
+	._25() {
+		border-radius: 25%;
+	}
+
+	._50() {
+		border-radius: 50%;
 	}
 
 	.diag(@tr-bl; @tl-br) {
@@ -23,17 +23,5 @@
 		border-radius: @tb ~'/'@lr;
 	}
 
-	.round() {
-		border-radius: 50%;
-	}
-
-	.kids-fl(@val) {
-		& :first-child {
-			#br.l(@val);
-		}
 	
-		& :last-child {
-			#br.r(@val);
-		}
-	}
 }
