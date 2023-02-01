@@ -1,0 +1,7 @@
+.font-face(@family; @file; @format: "woff", @weight: 400) {
+	@font-face {
+		font-family: @family;
+		src: url('@{file}') format('@{format}');
+		font-weight: @weight;
+	}
+}
