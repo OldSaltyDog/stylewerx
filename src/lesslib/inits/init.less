@@ -1,5 +1,5 @@
 .reset(@base: 100%) {
-	a:is(:link, :visited, :local-link, :active), b, u, i, p, q, s, abbr, address, 
+	a, a:is(:link, :visited, :local-link, :active, :hover), b, u, i, p, q, s, abbr, address, 
 	article, aside, blockquote, body, button, caption, cite, code, dl, dt, dd, details, 
 	dialog, div, fieldset, footer, figure, figcaption, form, h1, h2, h3, h4, h5, h6, 
 	header, hgroup, html, input, label, legend, meter, nav, output, pre, progress, reset, 
@@ -30,21 +30,17 @@
 	:focus {
 		outline: 0;
 	}
-
-	#list.strip();
 }
 
-.no-bomp {
-	border: 0;
-	outline: 0;
-	margin: 0;
-	padding: 0;
-}
+
 
 @reset: {
 	.no-bomp();
 	font-size: inherit;
+	line-height: inherit;
 	text-decoration: none;
 	#box.border();
 	#bg.add(@t);
 }
+
+
