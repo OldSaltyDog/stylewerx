@@ -1,7 +1,13 @@
-.ol(@clr; @os: 0; @size: 1px; @style: solid) {
-	outline: @size @style @clr;
+#ol {
+	.set(@clr; @os: 0; @size: 1px; @style: solid) {
+		outline: @size @style @clr;
 
-	& when (@os > 0) {
-		outline-offset: @os;
+		& when (@os > 0) {
+			outline-offset: @os;
+		}
+	}
+
+	.none() {
+		outline: 0;
 	}
 }
