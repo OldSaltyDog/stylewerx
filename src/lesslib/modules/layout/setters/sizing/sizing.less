@@ -1,14 +1,14 @@
-.size(@s) {
-	height: @s;
-	width: @s;
-}
+#size() {
+	.set(@s) {
+		height: @s;
+		width: @s;
+	}
+	
+	.set(@w; @h) {
+		height: @h;
+		width: @w;
+	}
 
-.size(@w; @h) {
-	height: @h;
-	width: @w;
-}
-
-.size() {
 	.none() {
 		height: 0;
 		width: 0;
