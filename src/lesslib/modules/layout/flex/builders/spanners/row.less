@@ -7,32 +7,37 @@
 		}
 
 		.x() {
+
+			.center(@gap: 0; @pad: 0) {
+				#flex.row.auto(@gap, @pad);
+				#jc.c();
+				#ai.c();
+				
+			}
+
+			.fs-c(@gap: 0; @pad: 0) {
+				#flex.row.auto(@gap, @pad);
+				#ai.c();
+			}
+
 			.stretch(@gap: 0; @pad: 0) {
-				#flex.row();
+				#flex.row.auto(@gap, @pad);
 				#jc.str();
-				#flex.gap(@gap, @pad);
-				flex: auto;
 			}
 
 			.even(@pad: 0) {
-				#flex.row();
+				#flex.row.auto(0, @pad);
 				#jc.se();
-				padding: @pad;
-				flex: auto;
 			}
 
 			.around(@pad: 0) {
-				#flex.row();
+				#flex.row.auto(@gap, @pad);
 				#jc.sa();
-				padding: @pad;
-				flex: auto;
 			}
 
 			.between(@pad: 0) {
-				#flex.row();
+				#flex.row.auto(@gap, @pad);
 				#jc.sb();
-				padding: @pad;
-				flex: auto;
 			}
 			
 			.split(@nth; @gap: 0; @pad: 0) {

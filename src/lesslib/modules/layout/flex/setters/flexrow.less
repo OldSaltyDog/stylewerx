@@ -9,4 +9,11 @@
 			flex-direction: row;
 		}
 	}
+	.row()  {
+		.auto(@gap: 0; @pad: 0) {
+			display: flex;
+			#flex.gap(@gap, @pad);
+			flex: auto;
+		}
+	}
 }
