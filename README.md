@@ -1,4 +1,4 @@
-## StyleWerx ##
+# **StyleWerx** #
 
 | param | type | default | desc |
 | :---: | :--: | :-----: | :---- |
